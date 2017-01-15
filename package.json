@@ -1,0 +1,22 @@
+{
+  "name": "mypage",
+  "version": "1.0.0",
+  "description": "portfolio page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio",
+    "webpage",
+    "resume",
+    "contact_page"
+  ],
+  "author": "paszkowski_damian",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-stylus": "^2.6.0",
+    "gulp-webserver": "^0.9.1"
+  }
+}

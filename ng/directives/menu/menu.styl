@@ -1,0 +1,130 @@
+body{
+    background-color: #fbc102;
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu-desktop{
+    margin: 0;
+    margin-top: 15px;
+    position: fixed;
+    width: 100%;
+    color: white;
+    font-weight: 350;
+    border-bottom: 1px solid white;
+}
+
+.menu-list{
+    list-style: none;
+    margin-top: auto;
+}
+
+.menu-element {
+    display: inline-block;
+    box-sizing: border-box;
+    
+}
+
+.menu-element > a , .menu-mobile-element > a{
+    font-size: 1.2em;
+    color: white;
+}
+
+.menu-list > li > a:hover , .menu-mobile-element > a:hover{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu-selector > p{
+    float: right;
+    margin-right: 3em;
+}
+
+
+.menu-current{
+    font-weight: bold;
+}
+
+.menu-other{
+    font-weight: lighter;
+}
+
+menu-lg-selector{
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.menu-list-mobile{
+    transition: all ease-in-out 0.5s;
+    position: absolute;
+    top: 0;
+    list-style: none;
+    margin: 0;
+    margin-top: 45px;
+    padding: 0;
+    background-color: hsla(0, 0%, 36.2%, 0.5);
+    z-index: -2;    
+}
+
+.menu-list-mobile.ng-hide{
+ top: -300px;
+}
+
+.menu-mobile-icon > i{
+    color: white;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 15px;
+    margin: 0;
+    margin-bottom: 15px;
+    display: inline-block;
+    z-index: 10000;
+}
+
+.menu-mobile-logo{
+    width: 100px;
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.menu-mobile{
+    transition: all ease-in-out 0.5s;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+}
+
+menu-mobile.ng-hide{
+    background-color: hsla(0, 0%, 36.2%, 0.5);
+}
+
+.menu-mobile-element{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid hsla(0, 0%, 39.4%, 0.4);
+    margin: 0;
+    padding-left: 50px;
+    z-index: -10;
+}
+
+.menu-mobile-color {
+    transition: all ease-in-out 0.5s;
+    background-color:  hsla(0, 0%, 36.2%, 0.5);
+}
+
+.menu-mobile-no-color {
+    transition: all ease-in-out 0.5s;
+    background-color:  transparent;
+}
+
+.menu-mobile-selector{
+    color: white;
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    cursor: pointer;
+}
