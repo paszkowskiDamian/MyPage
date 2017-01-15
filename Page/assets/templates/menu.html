@@ -1,0 +1,35 @@
+<div ng-controller='menuCtrl' class="contriner">
+    <div class="row  menu-desktop hidden-sm-down">
+        <div class="col-2"></div>
+        <div class=" col-8">
+            <ul class="menu-list">
+                <li ng-repeat="section in sections" class="menu-element" ng-style="{ 'width' : 100/(sections.length)+'%' }"><a href="#" ng-click="scroller(section)">{{section}}</a></li>
+            </ul>
+        </div>
+        <div class="col-2 menu-selector">
+            <p>
+                <span ng-repeat="lg in langlist"><span class='menu-lg-selector' ng-class=" lg == language ? 'menu-current' : 'menu-other'" ng-click="foo(lg)">{{lg}}</span>
+                <span ng-if="langlist.length-1 > $index"> | </span>
+                </span>
+            </p>
+        </div>
+    </div>
+    <div class="hidden-md-up menu-mobile">
+        <div   ng-class=" display ? 'menu-mobile-color' : 'menu-mobile-no-color'">
+            <div ng-click="display = !display" class="menu-mobile-icon">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <span class="menu-mobile-logo">paszkowski</span>
+            </div>
+            <p class="menu-mobile-selector">
+                <span ng-repeat="lg in langlist"><span class='menu-lg-selector' ng-class=" lg == language ? 'menu-current' : 'menu-other'" ng-click="foo(lg)">{{lg}}</span>
+                <span ng-if="langlist.length-1 > $index"> | </span>
+                </span>
+            </p>
+        </div>
+
+        <ul class="menu-list-mobile col-12" ng-hide="!display">
+            <li ng-repeat="section in sections" class="menu-mobile-element"><a href="#" ng-click="scroller(section)">{{section}}</a></li>
+        </ul>
+
+    </div>
+</div>

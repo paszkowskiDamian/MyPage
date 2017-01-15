@@ -1,0 +1,14 @@
+<div ng-controller="headerImgCtrl">
+    <div ng-style="{'background-image':'url({{imgurl}})', 'background-position' : 'top', 'background-size': 'cover', 'height' : windowHeight- 60 +'px' }"
+        ng-class="header-img">
+        <div ng-style="{'background-image':'url({{imgurl}})', 'background-position' : 'right top', 'background-size': 'cover', 'height' : windowHeight- 60 +'px' }">
+            <div class="container " ng-style="{'position' : 'relative', 'top' : windowHeight/2.2+'px'}">
+                <div class="row">
+                    <div class="col-12 header-title">
+                        <h1>{{name}}</h1>
+                        <h1 class="header-bold-text">{{lastname}}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

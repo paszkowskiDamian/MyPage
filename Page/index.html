@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Roboto font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+    <!--AngulaJs cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/f737dd2884.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <!--Page stylesheet-->
+    <link rel="stylesheet" href="assets/css/app.css">
+
+</head>
+
+<body ng-app="app">
+
+    <header ng-controller="headerCtrl">
+        
+        <top-nav sections="content.SECTIONS" language="currentLang" langlist="langKeys" foo='changeLang'></top-nav>
+        
+
+        <header-img name="{{content.NAME}}" lastname="{{content.LASTNAME}}" imgurl=" assets/img/header_img.jpg "></header-img>
+
+        <!--<div style="background-image: url('assets/img/header_img.jpg');background-size: cover; height: 600px;">-->
+
+        </div>
+    </header>
+
+    <about-me></about-me>
+
+    <div style="height: 2000px;">
+    </div>
+    <div style="height: 2000px;" id="resume">
+    thats me</div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/app.js"></script>
+
+
+</body>
+
+</html>
