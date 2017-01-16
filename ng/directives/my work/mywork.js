@@ -1,10 +1,10 @@
 var app = angular.module('app');
 
-app.directive('aboutMe',function () {
+app.directive('myWork',function () {
     return {
         restrict: 'E', 
         scope: {
         },
-        templateUrl: 'assets/templates/aboutme.html'
+        templateUrl: 'assets/templates/mywork.html'
     }
-  }) 
+  })  

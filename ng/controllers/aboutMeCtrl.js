@@ -2,12 +2,16 @@ var app = angular.module('app');
 
 app.controller('aboutMeCtrl', function ($scope, getContentSvrc) {
 
-    getContentSvrc.getData('about-me').then(function (data) {
-        $scope.content = data.data;
-        console.log(data.data)
-    });
 
-    
+
+
+    $scope.$watch(function () {
+        return getContentSvrc.getCurrentLang();
+    }, function (newVal) {
+        getContentSvrc.getData('about-me').then(function (data) {
+            $scope.content = data.data;
+        });
+    }, true)
 
 })
 

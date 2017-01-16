@@ -1,8 +1,9 @@
 var app = angular.module('app');
 
-app.service('getContentSvrc', function($http) {
+app.service('getContentSvrc', function ($http) {
     var langKey = ['en', 'pl'];
     var defaultLang = 'en';
+    var currentLang = defaultLang;
 
     this.setDefault = function (key) {
         if (langKey.includes(key)) {
@@ -12,6 +13,10 @@ app.service('getContentSvrc', function($http) {
 
     this.getDefault = function () {
         return defaultLang;
+    }
+
+    this.getCurrentLang = function () {
+        return currentLang;
     }
 
     this.isDefault = function (key) {
@@ -28,10 +33,16 @@ app.service('getContentSvrc', function($http) {
         }
     }
 
-    this.getData = function (section, langKey) {
-        if (typeof langKey === 'undefined') {
-            langKey = defaultLang
+    this.setCurrentLang = function(key) {
+        if (langKey.includes(key)) {
+            currentLang = key;
         }
-        return $http.get('../assets/content/' + section + '/' + langKey + '.json');
+    }
+
+    this.getData = function (section, key) {
+        if (typeof Key === 'undefined') {
+            key = currentLang;
+        }
+        return $http.get('../assets/content/' + section + '/' + key + '.json');
     }
 });

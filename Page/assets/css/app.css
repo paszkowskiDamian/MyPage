@@ -9,11 +9,26 @@ h3,
 h4 {
   font-weight: 500;
 }
-#loader {
-  background-color: #ff0;
+
+.about-img {
   width: 100%;
 }
-
+.about-section {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+.about-line {
+  position: relative;
+  width: 150%;
+  right: 50%;
+  z-index: -100;
+  border-bottom: 1px solid #3e3e3e;
+}
+.about-text {
+  padding-top: 30px;
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 .header-title {
   font-size: 4em;
@@ -23,11 +38,6 @@ h4 {
   font-weight: 700;
 }
 
-body {
-  background-color: #fbc102;
-  margin: 0;
-  padding: 0;
-}
 .menu-desktop {
   margin: 0;
   margin-top: 15px;
@@ -132,4 +142,39 @@ menu-mobile.ng-hide {
   right: 30px;
   top: 15px;
   cursor: pointer;
+}
+
+.line {
+  position: relative;
+  width: 100%;
+  border-bottom: 2px solid #3e3e3e;
+}
+.my-work-list {
+  list-style: none;
+}
+.mywork-category-list {
+  display: inline-block;
+}
+.mywork-category-list > span {
+  padding: 0px 10px;
+}
+.mywork-category-list > span:hover {
+  font-weight: bold;
+}
+.my-work-gallery {
+  padding: 0px;
+}
+.image {
+  height: 100px;
+  box-sizing: border-box;
+  background-color: #808080;
+  margin-right: 5px;
+  width: 24%;
+  float: left;
+  margin-top: 5px;
+}
+@media only screen and (max-width: 767px) {
+  .image {
+    width: 100%;
+  }
 }

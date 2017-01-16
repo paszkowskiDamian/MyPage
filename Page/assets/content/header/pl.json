@@ -1,5 +1,5 @@
 {
-    "SECTIONS" : ["o mnie" , "moje prace", "umiejętności", "doświadczenie", "kontakt"],
+    "SECTIONS" : ["o mnie" , "portfolio", "umiejętności", "doświadczenie", "kontakt"],
     "NAME" : "damian",
     "LASTNAME" : "paszkowski"
 }

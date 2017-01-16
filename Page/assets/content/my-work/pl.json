@@ -1,5 +1,6 @@
 {
-    "MY_WORK" : [
+    "SECTION" : "portfolio",
+    "MYWORK" : [
         {
 
             "CATEGORY" : "web",
@@ -22,7 +23,7 @@
         },
         {
 
-            "CATEGORY" : "architecture",
+            "CATEGORY" : "architektura",
             "PROJECTS" : [
 
                 {
@@ -42,7 +43,7 @@
         },
         {
 
-            "CATEGORY" : "graphics",
+            "CATEGORY" : "grafika",
             "PROJECTS" : [
 
                 {

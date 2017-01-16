@@ -63,12 +63,16 @@ var app = angular.module('app');
 
 app.controller('aboutMeCtrl', function ($scope, getContentSvrc) {
 
-    getContentSvrc.getData('about-me').then(function (data) {
-        $scope.content = data.data;
-        console.log(data.data)
-    });
 
-    
+
+
+    $scope.$watch(function () {
+        return getContentSvrc.getCurrentLang();
+    }, function (newVal) {
+        getContentSvrc.getData('about-me').then(function (data) {
+            $scope.content = data.data;
+        });
+    }, true)
 
 })
 
@@ -76,7 +80,7 @@ app.controller('aboutMeCtrl', function ($scope, getContentSvrc) {
 
 var app = angular.module('app');
 
-app.controller('headerCtrl', function($scope, getContentSvrc, $rootScope) {
+app.controller('headerCtrl', function ($scope, getContentSvrc, $rootScope) {
 
     getContentSvrc.getData('header').then((res) => {
         $scope.content = res.data;
@@ -87,14 +91,14 @@ app.controller('headerCtrl', function($scope, getContentSvrc, $rootScope) {
 
     $scope.headerImage = 'assets/img/header_img.jpg';
 
-        $scope.changeLang = function(lang) {
+    $scope.changeLang = function (lang) {
+            getContentSvrc.setCurrentLang(lang);
+            getContentSvrc.getData('header').then((res) => {
+            $scope.content = res.data;
+            $scope.currentLang = lang;
+        });
 
-            getContentSvrc.getData('header', lang).then((res) => {
-                $scope.content = res.data;
-                $scope.currentLang = lang;
-            });
-
-        }
+    }
 
 })
 
@@ -104,7 +108,11 @@ var app = angular.module('app');
 
 app.controller('headerImgCtrl', function($scope) {
 
-    $scope.windowHeight = window.innerHeight;
+    $scope.$watch(function() {
+        return window.innerHeight;
+    },function (height) {
+        $scope.windowHeight = height;
+      } );
 
 })
 
@@ -133,9 +141,50 @@ app.controller('menuCtrl', function ($scope) {
 
 var app = angular.module('app');
 
-app.service('getContentSvrc', function($http) {
+app.controller('myWorkCtrl', function ($scope, getContentSvrc) {
+
+    $scope.currentCategory = 'all';
+    $scope.projects = [];
+
+    $scope.selectCategory = function (category) {
+        $scope.currentCategory = category;
+        $scope.streamProjects();
+    }
+
+    $scope.streamProjects = function () {
+        var list = [];
+        for (var i = 0; i < $scope.content.MYWORK.length; i++) {
+
+            var category = $scope.content.MYWORK[i].CATEGORY;
+            if (category === $scope.currentCategory || $scope.currentCategory === 'all') {
+                for (var j = 0; j < $scope.content.MYWORK[i].PROJECTS.length; j++) {
+                    list.push($scope.content.MYWORK[i].PROJECTS[j]);
+                }
+            }
+        }
+        $scope.projects = list;
+    }
+
+    $scope.$watch(function () {
+        return getContentSvrc.getCurrentLang();
+    }, function (newVal) {
+        getContentSvrc.getData('my-work').then(function (data) {
+            $scope.content = data.data;
+            console.log($scope.content);
+            $scope.projects = $scope.streamProjects();
+        });
+    }, true)
+
+})
+
+
+
+var app = angular.module('app');
+
+app.service('getContentSvrc', function ($http) {
     var langKey = ['en', 'pl'];
     var defaultLang = 'en';
+    var currentLang = defaultLang;
 
     this.setDefault = function (key) {
         if (langKey.includes(key)) {
@@ -145,6 +194,10 @@ app.service('getContentSvrc', function($http) {
 
     this.getDefault = function () {
         return defaultLang;
+    }
+
+    this.getCurrentLang = function () {
+        return currentLang;
     }
 
     this.isDefault = function (key) {
@@ -161,11 +214,17 @@ app.service('getContentSvrc', function($http) {
         }
     }
 
-    this.getData = function (section, langKey) {
-        if (typeof langKey === 'undefined') {
-            langKey = defaultLang
+    this.setCurrentLang = function(key) {
+        if (langKey.includes(key)) {
+            currentLang = key;
         }
-        return $http.get('../assets/content/' + section + '/' + langKey + '.json');
+    }
+
+    this.getData = function (section, key) {
+        if (typeof Key === 'undefined') {
+            key = currentLang;
+        }
+        return $http.get('../assets/content/' + section + '/' + key + '.json');
     }
 });
 var app = angular.module('app');
@@ -177,7 +236,7 @@ app.directive('aboutMe',function () {
         },
         templateUrl: 'assets/templates/aboutme.html'
     }
-  })
+  }) 
 var app = angular.module('app');
 
 app.directive('headerImg',function () {
@@ -205,3 +264,13 @@ app.directive('topNav',function () {
         templateUrl: 'assets/templates/menu.html'
     }
   })
+var app = angular.module('app');
+
+app.directive('myWork',function () {
+    return {
+        restrict: 'E', 
+        scope: {
+        },
+        templateUrl: 'assets/templates/mywork.html'
+    }
+  })  

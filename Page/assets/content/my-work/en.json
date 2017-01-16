@@ -1,5 +1,6 @@
 {
-    "MY_WORK" : [
+    "SECTION" : "my work",
+    "MYWORK" : [
         {
 
             "CATEGORY" : "web",
@@ -7,13 +8,13 @@
 
                 {
                     "PROJECT" : "Awesome page",
-                    "IMAGE_URL" : ["../img/awesomeImage1.jpg","../img/awesomeImage2.jpg","../img/awesomeImage3.jpg"],
+                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 },
 
                 {
                     "PROJECT" : "Even better page",
-                    "IMAGE_URL" : ["../img/awesomeImage1.jpg","../img/awesomeImage2.jpg","../img/awesomeImage3.jpg"],
+                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 }
 
@@ -26,14 +27,14 @@
             "PROJECTS" : [
 
                 {
-                    "PROJECT" : "Awesome page",
-                    "IMAGE_URL" : ["../img/awesomeImage1.jpg","../img/awesomeImage2.jpg","../img/awesomeImage3.jpg"],
+                    "PROJECT" : "family house",
+                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 },
 
                 {
                     "PROJECT" : "Even better page",
-                    "IMAGE_URL" : ["../img/awesomeImage1.jpg","../img/awesomeImage2.jpg","../img/awesomeImage3.jpg"],
+                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 }
 
@@ -47,13 +48,13 @@
 
                 {
                     "PROJECT" : "Awesome page",
-                    "IMAGE_URL" : ["../img/awesomeImage1.jpg","../img/awesomeImage2.jpg","../img/awesomeImage3.jpg"],
+                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 },
 
                 {
                     "PROJECT" : "Even better page",
-                    "IMAGE_URL" : ["../img/awesomeImage1.jpg","../img/awesomeImage2.jpg","../img/awesomeImage3.jpg"],
+                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 }
 

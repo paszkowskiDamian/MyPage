@@ -1,5 +1,14 @@
-<div class="" ng-controller="aboutMeCtrl">
- {{content.SECTION}}<br>
- {{content.SECTIONCONTENT}}
+<div class="container " ng-controller="aboutMeCtrl" id="{{content.SECTION.replace(' ','')}}">
+
+    <div class="row about-section">
+        <div class="col-md-3">
+            <img class="about-img" src="assets/img/about.png">
+        </div>
+        <div class="col-md-9 about-text">
+            <h2 ><strong>{{content.SECTION}}</strong></h2>
+            <p class="about-line"></p>
+            <p>{{content.SECTIONCONTENT}}</p>
+        </div>
+    </div>
 
 </div>
