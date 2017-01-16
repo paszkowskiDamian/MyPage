@@ -1,5 +1,6 @@
 {
     "SECTION" : "my work",
+    "ALL" : "all",
     "MYWORK" : [
         {
 
@@ -7,14 +8,14 @@
             "PROJECTS" : [
 
                 {
-                    "PROJECT" : "Awesome page",
-                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
+                    "PROJECT" : "AirControl",
+                    "IMAGEURL" : ["assets/img/projects/web/air-ctrl/airctrl1.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 },
 
                 {
-                    "PROJECT" : "Even better page",
-                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
+                    "PROJECT" : "PolCer",
+                    "IMAGEURL" : ["assets/img/projects/web/polcer/polcer2.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 }
 
@@ -27,15 +28,38 @@
             "PROJECTS" : [
 
                 {
-                    "PROJECT" : "family house",
-                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
+                    "PROJECT" : "Mountain hostel",
+                    "IMAGEURL" : [  "assets/img/projects/architecture/hostel/render3.jpg",
+                                    "assets/img/projects/architecture/hostel/render1.jpg",
+                                    "assets/img/projects/architecture/hostel/render2.jpg",
+                                    "assets/img/projects/architecture/hostel/rzut1.jpg",
+                                    "assets/img/projects/architecture/hostel/rzut2.jpg",
+                                    "assets/img/projects/architecture/hostel/rzut3.jpg"],
+                    "DESCRIPTION" : "This project was made during second year of studies. To find an idea for this project I went to the mountains to see a plot. It took almost 3 hours to get to the top and it was worth it. The view was a reward. That’s why I wanted to create a place where people can rest and enjoy the view. First I elevated grassland to make a flat viewing platform with glass pavilion containing restaurant and staircase. Below the platform there is small spa, room with fireplace to integrate with others. On the lowest level there are actual hostel rooms. Elevation is made of wood to blend with environment. "
                 },
 
                 {
-                    "PROJECT" : "Even better page",
-                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
+                    "PROJECT" : "Workshops",
+                    "IMAGEURL" : [  "assets/img/projects/architecture/workshops/workshops-main.jpg"
+                                    ],
+                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+                },
+
+                {
+                    "PROJECT" : "Car control station",
+                    "IMAGEURL" : [  "assets/img/projects/architecture/cars/render1.jpg",
+                                    "assets/img/projects/architecture/cars/script.jpg",
+                                    "assets/img/projects/architecture/cars/rzut.jpg"
+                                    ],
+                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+                },
+
+                {
+                    "PROJECT" : "Hive",
+                    "IMAGEURL" : [  "assets/img/projects/architecture/hive/render.jpg",
+                                    "assets/img/projects/architecture/hive/script.jpg"
+                                    ],
+                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
                 }
 
             ]
@@ -48,13 +72,13 @@
 
                 {
                     "PROJECT" : "Awesome page",
-                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
+                    "IMAGEURL" : ["assets/img/projects/graphics/poster.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 },
 
                 {
                     "PROJECT" : "Even better page",
-                    "IMAGEURL" : ["assets/img/awesomeImage1.jpg","assets/img/awesomeImage2.jpg","assets/img/awesomeImage3.jpg"],
+                    "IMAGEURL" : ["assets/img/projects/graphics/drabina.jpg","assets/img/projects/proj2.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 }
 
@@ -64,3 +88,4 @@
 
     ]
 }
+

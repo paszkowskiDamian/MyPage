@@ -2,7 +2,7 @@
 
     <div class="container">
         <div class="row">
-            <h2 class="col-12">{{content.SECTION}}</h2>
+            <h2 class="col-12"><strong>{{content.SECTION}}</strong></h2>
         </div>
     </div>
     <p class='line'></p>
@@ -11,13 +11,12 @@
     <div class="container">
         <div class="row">
             <ul class="col-12 my-work-list">
-                <li class="mywork-category-list"> <span ng-click="selectCategory('all')" ng-class=" currentCategory === 'all' ? 'menu-current' : 'menu-other' ">all</span></li>
+                <li class="mywork-category-list"> <span ng-click="selectCategory('all')" ng-class=" currentCategory === 'all' ? 'menu-current' : 'menu-other' ">{{content.ALL}}</span></li>
                 <li ng-repeat="category in content.MYWORK" class="mywork-category-list"> | <span ng-click="selectCategory(category.CATEGORY)" ng-class=" currentCategory === category.CATEGORY ? 'menu-current' : 'menu-other' ">{{category.CATEGORY}}</span> </li>
             </ul>
         </div>
-
         <div class="row my-work-gallery">
-            <div class="image" ng-repeat="proj in projects">
+            <div class="image" style="background-image: url('{{proj.IMAGEURL[0]}}'); background-size: cover;  background-position: center" ng-repeat="proj in projects">
         </div>
 
     </div>

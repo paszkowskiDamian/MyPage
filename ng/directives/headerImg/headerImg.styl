@@ -1,9 +1,21 @@
 .header-title{
-    font-size: 4em;
+    
     color: white;
+    z-index: 0;
 }
 
 .header-bold-text{
-    font-weight: 700;    
+    font-weight: 700;  
+    z-index: 0;  
 }
 
+.header-title > h1 {
+    font-size: 5em; 
+}
+
+@media only screen and (max-width: 767px) {
+    .header-title > h1 {
+    font-size: 3em; 
+}
+
+}

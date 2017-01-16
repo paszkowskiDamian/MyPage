@@ -3,11 +3,10 @@ var app = angular.module('app');
 app.controller('myWorkCtrl', function ($scope, getContentSvrc) {
 
     $scope.currentCategory = 'all';
-    $scope.projects = [];
 
     $scope.selectCategory = function (category) {
         $scope.currentCategory = category;
-        $scope.streamProjects();
+        $scope.projects = $scope.streamProjects();
     }
 
     $scope.streamProjects = function () {
@@ -21,7 +20,7 @@ app.controller('myWorkCtrl', function ($scope, getContentSvrc) {
                 }
             }
         }
-        $scope.projects = list;
+        return list;
     }
 
     $scope.$watch(function () {
@@ -29,8 +28,9 @@ app.controller('myWorkCtrl', function ($scope, getContentSvrc) {
     }, function (newVal) {
         getContentSvrc.getData('my-work').then(function (data) {
             $scope.content = data.data;
-            console.log($scope.content);
+            
             $scope.projects = $scope.streamProjects();
+            
         });
     }, true)
 

@@ -1,11 +1,17 @@
+.menu{
+    
+}
+
 .menu-desktop{
     margin: 0;
-    margin-top: 15px;
+    padding-top: 15px;
     position: fixed;
     width: 100%;
     color: white;
     font-weight: 350;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid hsla(0, 0%, 39.4%, 0.8);
+    z-index: 100;
+    background-color: hsla(0, 0%, 39.4%, 0.5); 
 }
 
 .menu-list{
@@ -22,6 +28,7 @@
 .menu-element > a , .menu-mobile-element > a{
     font-size: 1.2em;
     color: white;
+    margin-right: 30px;
 }
 
 .menu-list > li > a:hover , .menu-mobile-element > a:hover{
@@ -64,6 +71,10 @@ menu-lg-selector{
  top: -300px;
 }
 
+.menu-mobile-icon{
+    width: 50%;
+}
+
 .menu-mobile-icon > i{
     color: white;
     box-sizing: border-box;
@@ -74,6 +85,8 @@ menu-lg-selector{
     display: inline-block;
     z-index: 10000;
 }
+
+
 
 .menu-mobile-logo{
     width: 100px;
@@ -87,7 +100,8 @@ menu-lg-selector{
     transition: all ease-in-out 0.5s;
     position: fixed;
     width: 100%;
-    background-color: transparent;
+    background-color: hsla(0, 0%, 36.2%, 0.5);
+    z-index: 5;
 }
 
 menu-mobile.ng-hide{
@@ -105,7 +119,7 @@ menu-mobile.ng-hide{
 
 .menu-mobile-color {
     transition: all ease-in-out 0.5s;
-    background-color:  hsla(0, 0%, 36.2%, 0.5);
+    
 }
 
 .menu-mobile-no-color {

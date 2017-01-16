@@ -1,0 +1,21 @@
+{
+    "PROJECT": "SPA",
+    "IMAGEURL": [
+        "assets/img/projects/architecture/spa/render2.jpg",
+        "assets/img/projects/architecture/spa/render1.jpg",
+        "assets/img/projects/architecture/spa/energysheme.jpg"
+    ],
+    "DESCRIPTION": "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+}
+
+{
+    "PROJECT": "Park",
+    "IMAGEURL": [
+        "assets/img/projects/architecture/park/2.jpg",
+        "assets/img/projects/architecture/park/1.jpg",
+        "assets/img/projects/architecture/park/plan.jpg",
+        "assets/img/projects/architecture/park/detal.jpg",
+        "assets/img/projects/architecture/park/utilities.jpg"
+    ],
+    "DESCRIPTION": "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+},

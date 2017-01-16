@@ -1,9 +1,8 @@
-<div ng-controller='menuCtrl' class="contriner">
+<div ng-controller='menuCtrl' class="contriner menu">
     <div class="row  menu-desktop hidden-sm-down">
-        <div class="col-2"></div>
-        <div class=" col-8">
+        <div class=" col-10">
             <ul class="menu-list">
-                <li ng-repeat="section in sections" class="menu-element" ng-style="{ 'width' : 100/(sections.length)+'%' }"><a href="#" ng-click="scroller(section)">{{section}}</a></li>
+                <li ng-repeat="section in sections" class="menu-element" ><a href="#" ng-click="scroller(section)">{{section}}</a></li>
             </ul>
         </div>
         <div class="col-2 menu-selector">
@@ -15,9 +14,10 @@
         </div>
     </div>
     <div class="hidden-md-up menu-mobile">
-        <div   ng-class=" display ? 'menu-mobile-color' : 'menu-mobile-no-color'">
-            <div ng-click="display = !display" class="menu-mobile-icon">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+        <div ng-class=" display ? 'menu-mobile-color' : 'menu-mobile-no-color'">
+            <div class="menu-mobile-icon" ng-click="display = !display">
+                <i  ng-hide="display" class="fa fa-bars navigationUI" aria-hidden="true"></i>
+                <i  ng-hide="!display" class="fa fa-times navigationUI" aria-hidden="true"></i>
                 <span class="menu-mobile-logo">paszkowski</span>
             </div>
             <p class="menu-mobile-selector">

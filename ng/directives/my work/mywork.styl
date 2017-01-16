@@ -25,11 +25,13 @@
 }
 
 .image{
-    height: 100px;
+    
     box-sizing: border-box;
     background-color: gray;
     margin-right: 5px;
     width: 24%;
+    padding-bottom : 24%; /* = width for a 1:1 aspect ratio */
+    
     float: left;
     margin-top: 5px;
 }
@@ -37,5 +39,6 @@
 @media only screen and (max-width: 767px) {
     .image {
         width: 100%;
+        padding-bottom : 100%;
     }
 }
