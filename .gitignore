@@ -77,6 +77,10 @@ artifacts/
 node_modules
 jspm_packages
 
+#compiled files
+Page/assets/css
+Page/assets/js
+
 # Chutzpah Test files
 _Chutzpah*
 
