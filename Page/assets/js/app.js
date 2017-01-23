@@ -63,9 +63,6 @@ var app = angular.module('app');
 
 app.controller('aboutMeCtrl', function ($scope, getContentSvrc) {
 
-
-
-
     $scope.$watch(function () {
         return getContentSvrc.getCurrentLang();
     }, function (newVal) {
@@ -120,19 +117,14 @@ app.controller('headerImgCtrl', function($scope) {
 
 var app = angular.module('app');
 
-app.controller('menuCtrl', function ($scope) {
+app.controller('menuCtrl', function ($scope,scrollSvrc) {
 
 
     $scope.scroller = function (anchor) {
         $scope.display = false;
 
-        var topOffset = $('#' + anchor.replace(" ", "")).offset().top;
-        $('html , body').animate({
-            scrollTop: topOffset-60
-        }, 500
-        )
+        scrollSvrc.scroller(anchor);
     }
-
 
 })
 
@@ -140,13 +132,23 @@ app.controller('menuCtrl', function ($scope) {
 
 var app = angular.module('app');
 
-app.controller('myWorkCtrl', function ($scope, getContentSvrc) {
+app.controller('myWorkCtrl', function ($scope, getContentSvrc,scrollSvrc) {
 
     $scope.currentCategory = 'all';
+    $scope.hideView = true;
 
     $scope.selectCategory = function (category) {
         $scope.currentCategory = category;
+        $scope.hideView = true;
         $scope.projects = $scope.streamProjects();
+    }
+
+    $scope.viewProject;
+
+    $scope.click = function (section,project) {
+        $scope.hideView = false;
+        $scope.viewProject = project;
+        scrollSvrc.scroller(section); 
     }
 
     $scope.streamProjects = function () {
@@ -178,6 +180,60 @@ app.controller('myWorkCtrl', function ($scope, getContentSvrc) {
 
 
 
+var app = angular.module('app');
+
+app.controller('projectViewCtrl', function ($scope, $element, $attrs, scrollSvrc, $interval) {
+    $scope.data = $scope.project;
+    $scope.imageList;
+
+    $scope.return = function () {
+        scrollSvrc.scroller($scope.anchor);
+    }
+
+    $scope.$watch(function () {
+        return $scope.project;
+    }, function (newData) {
+
+        if (newData !== undefined) {
+            $scope.mainImage = newData.IMAGEURL[0];
+            $scope.imageList = newData.IMAGEURL;
+        }
+    });
+
+    $scope.setMain = function (selected) {
+        $scope.mainImage = selected;
+    };
+
+    var imageIndex = 0;
+
+    $interval(function () {
+        if ($scope.imageList !== undefined) {
+            imageIndex++;
+            if (imageIndex >= $scope.imageList.length) {
+                imageIndex = 0;
+            }
+            $scope.mainImage = $scope.imageList[imageIndex];
+        }
+    }, 6000);
+
+})
+
+
+
+var app = angular.module('app');
+
+app.controller('skillsCtrl',function ($scope,getContentSvrc) {
+
+
+    $scope.$watch(function () {
+        return getContentSvrc.getCurrentLang();
+    }, function (newVal) {
+        getContentSvrc.getData('skills').then(function (data) {
+            $scope.content = data.data;
+        });
+    }, true)
+
+  })
 var app = angular.module('app');
 
 app.service('getContentSvrc', function ($http) {
@@ -228,6 +284,19 @@ app.service('getContentSvrc', function ($http) {
 });
 var app = angular.module('app');
 
+app.service('scrollSvrc', function () {
+
+    this.scroller = function (anchor) {
+        var topOffset = $('#' + anchor.replace(" ", "")).offset().top;
+        $('html , body').animate({
+            scrollTop: topOffset - 60
+        }, 500
+        )
+    }
+
+});
+var app = angular.module('app');
+
 app.directive('aboutMe',function () {
     return {
         restrict: 'E', 
@@ -273,3 +342,28 @@ app.directive('myWork',function () {
         templateUrl: 'assets/templates/mywork.html'
     }
   })  
+var app = angular.module('app');
+
+app.directive('projectView',function () {
+    return {
+        restrict: 'E', 
+        scope: {
+            project : '=',
+            hide: '=',
+            anchor: '='
+        },
+        controller: 'projectViewCtrl',
+        templateUrl: 'assets/templates/projectView.html'
+    }
+  })
+var app = angular.module('app');
+
+app.directive('skills',function () {
+    return{
+        restrict: 'E', 
+        scope: {
+        },
+        controller: 'skillsCtrl',
+        templateUrl: 'assets/templates/skills.html'
+    }
+  })

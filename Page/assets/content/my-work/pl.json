@@ -1,5 +1,5 @@
 {
-    "SECTION" : "my work",
+    "SECTION" : "portfolio",
     "ALL" : "wszystko",
     "MYWORK" : [
         {
@@ -8,14 +8,16 @@
             "PROJECTS" : [
 
                 {
-                    "PROJECT" : "Awesome page",
-                    "IMAGEURL" : ["assets/img/projects/proj1.jpg","assets/img/projects/proj2.jpg"],
+                    "PROJECT" : "AirControl",
+                    "SUBTEXT" : "PanGenerator - warsztaty",
+                    "IMAGEURL" : ["assets/img/projects/web/air-ctrl/airctrl1.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 },
 
                 {
-                    "PROJECT" : "Even better page",
-                    "IMAGEURL" : ["assets/img/projects/proj1.jpg","assets/img/projects/proj2.jpg"],
+                    "PROJECT" : "PolCer",
+                    "SUBTEXT" : "strona producenta ceramiki",
+                    "IMAGEURL" : ["assets/img/projects/web/polcer/polcer2.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 }
 
@@ -24,19 +26,50 @@
         },
         {
 
-            "CATEGORY" : "architecture",
+            "CATEGORY" : "architektura",
             "PROJECTS" : [
 
                 {
-                    "PROJECT" : "family house",
-                    "IMAGEURL" : ["assets/img/projects/proj1.jpg","assets/img/projects/proj2.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
+                    "PROJECT" : "Schronisko górskie",
+                    "SUBTEXT" : "Hala Boracza, Beskid Śląski",
+                    "IMAGEURL" : [  "assets/img/projects/architecture/hostel/render3.jpg",
+                                    "assets/img/projects/architecture/hostel/render1.jpg",
+                                    "assets/img/projects/architecture/hostel/render2.jpg",
+                                    "assets/img/projects/architecture/hostel/rzut1.jpg",
+                                    "assets/img/projects/architecture/hostel/rzut2.jpg",
+                                    "assets/img/projects/architecture/hostel/rzut3.jpg"],
+                    "DESCRIPTION" : "This project was made during second year of studies. To find an idea for this project I went to the mountains to see a plot. It took almost 3 hours to get to the top and it was worth it. The view was a reward. That’s why I wanted to create a place where people can rest and enjoy the view. First I elevated grassland to make a flat viewing platform with glass pavilion containing restaurant and staircase. Below the platform there is small spa, room with fireplace to integrate with others. On the lowest level there are actual hostel rooms. Elevation is made of wood to blend with environment. "
                 },
 
                 {
-                    "PROJECT" : "Even better page",
-                    "IMAGEURL" : ["assets/img/projects/proj1.jpg","assets/img/projects/proj2.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
+                    "PROJECT" : "Warsztaty",
+                    "SUBTEXT" : "Architektura Parametryczna",
+                    "IMAGEURL" : [  "assets/img/projects/architecture/workshops/workshops-main.jpg",
+                                    "assets/img/projects/architecture/workshops/workshops.jpg",
+                                    "assets/img/projects/architecture/workshops/workshops3.jpg",
+                                    "assets/img/projects/architecture/workshops/workshops2.jpg",
+                                    "assets/img/projects/architecture/workshops/workshops1.jpg"
+                                    ],
+                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+                },
+
+                {
+                    "PROJECT" : "Stacja kontroli pojazdów",
+                    "SUBTEXT" : "NAS-DRA staż",
+                    "IMAGEURL" : [  "assets/img/projects/architecture/cars/render1.jpg",
+                                    "assets/img/projects/architecture/cars/script.jpg",
+                                    "assets/img/projects/architecture/cars/rzut.jpg"
+                                    ],
+                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+                },
+
+                {
+                    "PROJECT" : "Hive",
+                    "SUBTEXT" : "Shapes of logic - Wrocław 2015",
+                    "IMAGEURL" : [  "assets/img/projects/architecture/hive/render.jpg",
+                                    "assets/img/projects/architecture/hive/script.jpg"
+                                    ],
+                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
                 }
 
             ]
@@ -44,18 +77,20 @@
         },
         {
 
-            "CATEGORY" : "graphics",
+            "CATEGORY" : "grafika",
             "PROJECTS" : [
 
                 {
-                    "PROJECT" : "Awesome page",
-                    "IMAGEURL" : ["assets/img/projects/proj1.jpg","assets/img/projects/proj2.jpg"],
+                    "PROJECT" : "Plakat",
+                    "SUBTEXT" : "Samorząd Studencki Wydziały Architektury",
+                    "IMAGEURL" : ["assets/img/projects/graphics/poster.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 },
 
                 {
-                    "PROJECT" : "Even better page",
-                    "IMAGEURL" : ["assets/img/projects/proj1.jpg","assets/img/projects/proj2.jpg"],
+                    "PROJECT" : "Plakat",
+                    "SUBTEXT" : "Samorząd Studencki Wydziały Architektury",
+                    "IMAGEURL" : ["assets/img/projects/graphics/drabina.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 }
 
@@ -65,3 +100,4 @@
 
     ]
 }
+

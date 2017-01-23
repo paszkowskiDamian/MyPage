@@ -5,6 +5,7 @@
             <h2 class="col-12"><strong>{{content.SECTION}}</strong></h2>
         </div>
     </div>
+
     <p class='line'></p>
 
 
@@ -12,17 +13,23 @@
         <div class="row">
             <ul class="col-12 my-work-list">
                 <li class="mywork-category-list"> <span ng-click="selectCategory('all')" ng-class=" currentCategory === 'all' ? 'menu-current' : 'menu-other' ">{{content.ALL}}</span></li>
-                <li ng-repeat="category in content.MYWORK" class="mywork-category-list"> | <span ng-click="selectCategory(category.CATEGORY)" ng-class=" currentCategory === category.CATEGORY ? 'menu-current' : 'menu-other' ">{{category.CATEGORY}}</span> </li>
+                <li ng-repeat="category in content.MYWORK" class="mywork-category-list"> | <span ng-click="selectCategory(category.CATEGORY)" ng-class=" currentCategory === category.CATEGORY ? 'menu-current' : 'menu-other' ">{{category.CATEGORY}}</span>                    </li>
             </ul>
         </div>
-        <div class="row my-work-gallery">
-            <div class="image" style="background-image: url('{{proj.IMAGEURL[0]}}'); background-size: cover;  background-position: center" ng-repeat="proj in projects">
+        <div class="container">
+            <div class="row my-work-gallery">
+                <div class="image" ng-click="click('view', proj )" style="background-image: url('{{proj.IMAGEURL[0]}}'); background-size: cover;  background-position: center"
+                    ng-repeat="proj in projects">
+                </div>
+            </div>
         </div>
-
     </div>
 
-
-
+    <div class="container" id="view">
+        <div class="my-work-animation" ng-hide="hideView">
+            <project-view project="viewProject" hide="hideView" anchor="content.SECTION.replace(' ','')" ></project-view>
+        </div>
+    </div>
 
 
 

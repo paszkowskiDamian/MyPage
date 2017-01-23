@@ -1,12 +1,22 @@
 var app = angular.module('app');
 
-app.controller('myWorkCtrl', function ($scope, getContentSvrc) {
+app.controller('myWorkCtrl', function ($scope, getContentSvrc,scrollSvrc) {
 
     $scope.currentCategory = 'all';
+    $scope.hideView = true;
 
     $scope.selectCategory = function (category) {
         $scope.currentCategory = category;
+        $scope.hideView = true;
         $scope.projects = $scope.streamProjects();
+    }
+
+    $scope.viewProject;
+
+    $scope.click = function (section,project) {
+        $scope.hideView = false;
+        $scope.viewProject = project;
+        scrollSvrc.scroller(section); 
     }
 
     $scope.streamProjects = function () {

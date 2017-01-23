@@ -9,12 +9,14 @@
 
                 {
                     "PROJECT" : "AirControl",
+                    "SUBTEXT" : "PanGenerator workshops",
                     "IMAGEURL" : ["assets/img/projects/web/air-ctrl/airctrl1.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 },
 
                 {
                     "PROJECT" : "PolCer",
+                    "SUBTEXT" : "ceramics manufacturers website",
                     "IMAGEURL" : ["assets/img/projects/web/polcer/polcer2.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 }
@@ -29,6 +31,7 @@
 
                 {
                     "PROJECT" : "Mountain hostel",
+                    "SUBTEXT" : "Hala Boracza, Beskid Śląski",
                     "IMAGEURL" : [  "assets/img/projects/architecture/hostel/render3.jpg",
                                     "assets/img/projects/architecture/hostel/render1.jpg",
                                     "assets/img/projects/architecture/hostel/render2.jpg",
@@ -40,13 +43,19 @@
 
                 {
                     "PROJECT" : "Workshops",
-                    "IMAGEURL" : [  "assets/img/projects/architecture/workshops/workshops-main.jpg"
+                    "SUBTEXT" : "Architektura Parametryczna",
+                    "IMAGEURL" : [  "assets/img/projects/architecture/workshops/workshops-main.jpg",
+                                    "assets/img/projects/architecture/workshops/workshops.jpg",
+                                    "assets/img/projects/architecture/workshops/workshops3.jpg",
+                                    "assets/img/projects/architecture/workshops/workshops2.jpg",
+                                    "assets/img/projects/architecture/workshops/workshops1.jpg"
                                     ],
                     "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
                 },
 
                 {
                     "PROJECT" : "Car control station",
+                    "SUBTEXT" : "NAS-DRA internship",
                     "IMAGEURL" : [  "assets/img/projects/architecture/cars/render1.jpg",
                                     "assets/img/projects/architecture/cars/script.jpg",
                                     "assets/img/projects/architecture/cars/rzut.jpg"
@@ -56,6 +65,7 @@
 
                 {
                     "PROJECT" : "Hive",
+                    "SUBTEXT" : "Shapes of logic - Wrocław 2015",
                     "IMAGEURL" : [  "assets/img/projects/architecture/hive/render.jpg",
                                     "assets/img/projects/architecture/hive/script.jpg"
                                     ],
@@ -72,13 +82,15 @@
 
                 {
                     "PROJECT" : "Awesome page",
+                    "SUBTEXT" : "Student Concuil POLŚL",
                     "IMAGEURL" : ["assets/img/projects/graphics/poster.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 },
 
                 {
                     "PROJECT" : "Even better page",
-                    "IMAGEURL" : ["assets/img/projects/graphics/drabina.jpg","assets/img/projects/proj2.jpg"],
+                    "SUBTEXT" : "Student Concuil POLŚL",
+                    "IMAGEURL" : ["assets/img/projects/graphics/drabina.jpg"],
                     "DESCRIPTION" : "This is awesome project"
                 }
 

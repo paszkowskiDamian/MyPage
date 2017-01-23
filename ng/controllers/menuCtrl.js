@@ -1,18 +1,13 @@
 var app = angular.module('app');
 
-app.controller('menuCtrl', function ($scope) {
+app.controller('menuCtrl', function ($scope,scrollSvrc) {
 
 
     $scope.scroller = function (anchor) {
         $scope.display = false;
 
-        var topOffset = $('#' + anchor.replace(" ", "")).offset().top;
-        $('html , body').animate({
-            scrollTop: topOffset-60
-        }, 500
-        )
+        scrollSvrc.scroller(anchor);
     }
-
 
 })
 
