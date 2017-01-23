@@ -222,6 +222,21 @@ app.controller('projectViewCtrl', function ($scope, $element, $attrs, scrollSvrc
 
 var app = angular.module('app');
 
+app.controller('resumeCtrl', function ($scope, getContentSvrc) {
+
+    $scope.$watch(function () {
+        return getContentSvrc.getCurrentLang();
+    }, function (newVal) {
+        getContentSvrc.getData('resume').then(function (data) {
+            $scope.content = data.data;
+        });
+    }, true);
+
+
+
+})
+var app = angular.module('app');
+
 app.controller('skillCategoryCtrl',function ($scope) {
 
     
@@ -361,6 +376,18 @@ app.directive('projectView',function () {
         },
         controller: 'projectViewCtrl',
         templateUrl: 'assets/templates/projectView.html'
+    }
+  })
+var app = angular.module('app');
+
+app.directive('resume',function () {
+    return {
+        restrict: 'E',
+        scope: {
+
+        },
+        controller: 'resumeCtrl',
+        templateUrl: 'assets/templates/resume.html'
     }
   })
 var app = angular.module('app');

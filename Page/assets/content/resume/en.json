@@ -1,0 +1,43 @@
+{
+    "SECTION": "resume",
+    "WORKEXPERIENCE": {
+        "SECTIONSUBNAME": "work experience",
+        "EXP": [
+            {
+                "WHEN": "may 2015 - now",
+                "POSSITION": "grasshopper + rhinoceros 3D tutor",
+                "SUBTEXT": "architektura parametryczna",
+                "DESCRIPTION": "Tutor at workshops dedicated to architecture students and professionals, where participants acquired knowledge about parametric design and digital manufacturing. During summer courses were completed with the fabrication of a pavilion."
+            },
+            {
+                "WHEN": "jul 2015 - aug 2015",
+                "POSSITION": "INTERN",
+                "SUBTEXT": "NASDRA architecture firm",
+                "DESCRIPTION": "Intern at an architecture firm in Katowice, Poland. Preparation of visualizations, environment analysis, research and design."
+            }
+        ]
+    },
+    "EDUCATION" : {
+        "SECTIONSUBNAME": "education",
+        "EXP": [
+            {
+                "WHEN": "oct 2015 - now",
+                "POSSITION": "macrofaculty",
+                "SUBTEXT": "Silesian Univercity of Technology",
+                "DESCRIPTION": "Macrofaculty of Automatic Control, Electronics and Computer Science."
+            },
+            {
+                "WHEN": "oct 2012 - aug 2015",
+                "POSSITION": "architecture",
+                "SUBTEXT": "Silesian Univercity of Technology",
+                "DESCRIPTION": "Bachelor degree in Architecture. Thesis topic: Science Center in Silesian Park. Member of Student Council and president of science club."
+            },
+            {
+                "WHEN": "mar 2015",
+                "POSSITION": "shapes of logic",
+                "SUBTEXT": "Internacional Conference and workshops, Wrocław",
+                "DESCRIPTION": "Conference in parametric paradigm in architecture. Workshop participant and presentation of workshop project at the conference. "
+            }
+        ]
+    }
+}
