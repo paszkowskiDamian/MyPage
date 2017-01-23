@@ -78,8 +78,8 @@ node_modules
 jspm_packages
 
 #compiled files
-Page/assets/css/
-Page/assets/js/
+Page/assets/css/*.css
+Page/assets/js/*.js
 
 # Chutzpah Test files
 _Chutzpah*
