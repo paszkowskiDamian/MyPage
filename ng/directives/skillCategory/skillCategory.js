@@ -1,6 +1,6 @@
 var app = angular.module('app');
 
-app.directive('skillCategory',function () {
+app.directive('skillCategory',function () { 
     return {
         restrict: 'E',
         scope: {

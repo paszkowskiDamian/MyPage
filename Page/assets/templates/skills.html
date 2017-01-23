@@ -1,6 +1,15 @@
-<div class="" id="{{content.SECTION.replace(' ','')}}">
-    <div>
-        {{content.SECTION.replace(' ','')}} this is {{content}}
-        <skill-category></skill-category>
+<div class="skills-section" id="{{content.SECTION.replace(' ','')}}">
+
+
+    <div class="container">
+        <div class="row">
+            <h2 class="col-12"><strong>{{content.SECTION}}</strong></h2>
+        </div>
+    </div>
+
+    <p class='line'></p>
+
+    <div class="container">
+        <skill-category ng-repeat="skills in content.SKILLS" category='skills.SKILL_CATEGORY' skills='skills.SKILL_CONTAINER'></skill-category>
     </div>
 </div>

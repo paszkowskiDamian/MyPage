@@ -249,3 +249,40 @@ menu-mobile.ng-hide {
   margin-bottom: 0;
 }
 
+.skill-header {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.skill-element {
+  box-sizing: border-box;
+  height: 100px;
+  margin-bottom: 1em;
+}
+.skill-name {
+  width: 100%;
+  font-size: 1.2em;
+  text-align: center;
+}
+.skill-bar {
+  position: relative;
+  bottom: 0;
+  height: 15px;
+}
+.skill-bar-strip {
+  width: 50%;
+  float: left;
+  height: 12px;
+  display: inline-block;
+}
+.skill-bar-inactive {
+  background-color: #afafaf;
+}
+.skill-bar-active {
+  background-color: #fdc502;
+}
+
+.skills-section {
+  margin-top: 3em;
+}

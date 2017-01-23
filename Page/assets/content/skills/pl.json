@@ -1,0 +1,47 @@
+{
+    "SECTION" : "umiejętności",
+    "SKILLS" : [
+        {
+            "SKILL_CATEGORY" : "programowanie",
+            "SKILL_CONTAINER" : [
+                {
+                    "SKILL" : "c++",
+                    "LEVEL" : "50"
+                },
+                {
+                    "SKILL" : "html",
+                    "LEVEL" : "70"
+                },
+                {
+                    "SKILL" : "css",
+                    "LEVEL" : "70"
+                },
+                {
+                    "SKILL" : "javascript",
+                    "LEVEL" : "60"
+                },
+                {
+                    "SKILL" : "git",
+                    "LEVEL" : "50"
+                }
+            ]
+        },
+        {
+            "SKILL_CATEGORY" : "design",
+            "SKILL_CONTAINER" : [
+                {
+                    "SKILL" : "rhino3d",
+                    "LEVEL" : "80"
+                },
+                {
+                    "SKILL" : "grasshopper",
+                    "LEVEL" : "80"
+                },
+                {
+                    "SKILL" : "photoshop",
+                    "LEVEL" : "80"
+                }
+            ]
+        }
+    ]
+}
