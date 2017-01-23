@@ -72,6 +72,11 @@ artifacts/
 *.svclog
 *.scc
 
+
+# Dependency directories
+node_modules
+jspm_packages
+
 # Chutzpah Test files
 _Chutzpah*
 
