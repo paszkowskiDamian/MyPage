@@ -222,6 +222,13 @@ app.controller('projectViewCtrl', function ($scope, $element, $attrs, scrollSvrc
 
 var app = angular.module('app');
 
+app.controller('skillCategoryCtrl',function ($scope) {
+
+    $scope.dupa = 'dupa';
+
+  })
+var app = angular.module('app');
+
 app.controller('skillsCtrl',function ($scope,getContentSvrc) {
 
 
@@ -354,6 +361,19 @@ app.directive('projectView',function () {
         },
         controller: 'projectViewCtrl',
         templateUrl: 'assets/templates/projectView.html'
+    }
+  })
+var app = angular.module('app');
+
+app.directive('skillCategory',function () {
+    return {
+        restrict: 'E',
+        scope: {
+            category : '=',
+            skills: '='
+        },
+        controller: 'skillCategoryCtrl',
+        templateUrl: 'assets/templates/skillCategory.html'
     }
   })
 var app = angular.module('app');
