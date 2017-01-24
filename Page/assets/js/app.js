@@ -77,11 +77,49 @@ app.controller('aboutMeCtrl', function ($scope, getContentSvrc) {
 
 var app = angular.module('app');
 
-app.controller('contactCtrl',function ($scope,getContentSvrc,emailSvrc) {
+app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc) {
+
+    $scope.name = "";
+    $scope.email = "";
+    $scope.message = "";
+
+    $scope.thanks = false;
+    $scope.nameError = false;
+    $scope.emailError = false;
+    $scope.messageError = false;
 
     $scope.send = function () {
-        console.log('send')
-        emailSvrc.sendEmail('hi','email','message');
+
+        if ($scope.name === undefined || $scope.name.length === 0) {
+            $scope.nameError = true;
+            console.log('nameErr');
+        }
+
+        if (validateEmail($scope.emial)) {
+            $scope.emailError = true;
+            console.log('emailErr'+ validateEmail($scope.emial));
+        }
+
+        if ($scope.message === undefined || $scope.message.length === 0) {
+            $scope.messageError = true;
+            console.log('messErr' + $scope.message.length === 0);
+        }
+
+        if (!$scope.nameError && !$scope.emailError && !$scope.messageError) {
+            console.log('udalo sie')
+            emailSvrc.sendEmail($scope.nameError, $scope.emailError, $scope.messageError).then(function (data) {
+                if (data.data === "sucess") {
+                    console.log('server odpowiedział!')
+                    $scope.thanks = true;
+                }
+            });
+        }
+
+        function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
     }
 
 
@@ -93,7 +131,7 @@ app.controller('contactCtrl',function ($scope,getContentSvrc,emailSvrc) {
         });
     }, true);
 
-  })
+})
 var app = angular.module('app');
 
 app.controller('headerCtrl', function ($scope, getContentSvrc, $rootScope) {
@@ -280,11 +318,11 @@ var app = angular.module('app');
 app.service('emailSvrc',function($http) {
     
     this.sendEmail = function(name,email,message){
-        $http.post('api/email.php',{
+        return $http.post('api/email.php',{
             'name': name,
             'email': email,
             'message': message 
-        })
+        });
     }
 })
 var app = angular.module('app');

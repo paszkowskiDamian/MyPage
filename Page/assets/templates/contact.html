@@ -39,15 +39,15 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="{{content.NAMEPLACEHOLDER}}" class="contact-form-input" name="name">
+                                <input type="text" placeholder="{{content.NAMEPLACEHOLDER}}" class="contact-form-input" ng-model="name" name="name">
                             </div>
                             <div class="col-md-6">
-                                <input type="email" placeholder="{{content.EMAILPLACEHOLDER}}" class="contact-form-input" name="email">
+                                <input type="email" placeholder="{{content.EMAILPLACEHOLDER}}" class="contact-form-input" ng-model="email" name="email">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <textarea placeholder="{{content.MESSAGEPLACEHOLDER}}" class="contact-form-input contact-textarea"></textarea>
+                                <textarea placeholder="{{content.MESSAGEPLACEHOLDER}}" class="contact-form-input contact-textarea" ng-model="message"></textarea>
                             </div>
                         </div>
                         <div class="row">
