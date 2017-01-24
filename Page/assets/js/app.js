@@ -77,7 +77,13 @@ app.controller('aboutMeCtrl', function ($scope, getContentSvrc) {
 
 var app = angular.module('app');
 
-app.controller('contactCtrl',function ($scope,getContentSvrc) {
+app.controller('contactCtrl',function ($scope,getContentSvrc,emailSvrc) {
+
+    $scope.send = function () {
+        console.log('send')
+        emailSvrc.sendEmail('hi','email','message');
+    }
+
 
     $scope.$watch(function () {
         return getContentSvrc.getCurrentLang();
@@ -271,6 +277,18 @@ app.controller('skillsCtrl',function ($scope,getContentSvrc) {
   })
 var app = angular.module('app');
 
+app.service('emailSvrc',function($http) {
+    
+    this.sendEmail = function(name,email,message){
+        $http.post('api/email.php',{
+            'name': name,
+            'email': email,
+            'message': message 
+        })
+    }
+})
+var app = angular.module('app');
+
 app.service('getContentSvrc', function ($http) {
     var langKey = ['en', 'pl'];
     var defaultLang = 'en';
@@ -332,6 +350,16 @@ app.service('scrollSvrc', function () {
 });
 var app = angular.module('app');
 
+app.directive('aboutMe',function () {
+    return {
+        restrict: 'E', 
+        scope: {
+        },
+        templateUrl: 'assets/templates/aboutme.html'
+    }
+  }) 
+var app = angular.module('app');
+
 app.directive('contact',function() {
     return {
         restrict: 'E',
@@ -342,16 +370,6 @@ app.directive('contact',function() {
         templateUrl : 'assets/templates/contact.html'
     }
 })
-var app = angular.module('app');
-
-app.directive('aboutMe',function () {
-    return {
-        restrict: 'E', 
-        scope: {
-        },
-        templateUrl: 'assets/templates/aboutme.html'
-    }
-  }) 
 var app = angular.module('app');
 
 app.directive('headerImg',function () {

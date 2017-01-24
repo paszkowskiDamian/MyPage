@@ -86,6 +86,11 @@ form {
   background-color: #fef1c8;
   width: 100%;
   border: none;
+  color: #5f5f5f;
+  font-weight: bold;
+}
+.contact-form-btn:hover {
+  background-color: #ffe38a;
 }
 
 .header-title {
