@@ -77,6 +77,19 @@ app.controller('aboutMeCtrl', function ($scope, getContentSvrc) {
 
 var app = angular.module('app');
 
+app.controller('contactCtrl',function ($scope,getContentSvrc) {
+
+    $scope.$watch(function () {
+        return getContentSvrc.getCurrentLang();
+    }, function (newVal) {
+        getContentSvrc.getData('contact').then(function (data) {
+            $scope.content = data.data;
+        });
+    }, true);
+
+  })
+var app = angular.module('app');
+
 app.controller('headerCtrl', function ($scope, getContentSvrc, $rootScope) {
 
     getContentSvrc.getData('header').then((res) => {
@@ -317,6 +330,18 @@ app.service('scrollSvrc', function () {
     }
 
 });
+var app = angular.module('app');
+
+app.directive('contact',function() {
+    return {
+        restrict: 'E',
+        scope: {
+
+        },
+        controller : 'contactCtrl',
+        templateUrl : 'assets/templates/contact.html'
+    }
+})
 var app = angular.module('app');
 
 app.directive('aboutMe',function () {

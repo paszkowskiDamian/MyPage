@@ -1,0 +1,18 @@
+{
+        "SECTION" : "contact me",
+
+        "PHONELABEL" : "phone",
+        "PHONENUMBER" : "668049497",
+        "EMAILLABEL" : "email",
+        "EMAIL" : "paszko.damian@gmail.com",
+        "LOCATIONLABEL" : "location",
+        "LOCATION" : "Gliwice",
+
+
+        "LEAVEMESSAGE" : "Please leave me a message",
+        "NAMEPLACEHOLDER": "name",
+        "EMAILPLACEHOLDER": "email",
+        "MESSAGEPLACEHOLDER": "message",
+        "SENDBTN": "send"
+
+}

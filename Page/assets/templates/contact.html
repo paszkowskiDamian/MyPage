@@ -1,0 +1,70 @@
+<div class="skills-section" id="{{content.SECTION.replace(' ','')}}">
+
+    <div class="container">
+        <div class="row">
+            <h2 class="col-12"><strong>{{content.SECTION}}</strong></h2>
+        </div>
+    </div>
+    <p class='line contact-line'></p>
+
+    <div class="contact-body">
+        <div class="container ">
+
+            <div class="row ">
+                <div class="col-md-5">
+                    <div class="contact-element">
+                        <div class="contact-icon-wraper"><i class="fa fa-envelope fa-2x contact-info-icon" aria-hidden="true"></i></div>
+                        <p class="contact-info"><small>{{content.EMAILLABEL}}:</small><strong> {{content.EMAIL}}</strong></p>
+                    </div>
+
+                    <div class="contact-element">
+                        <div class="contact-icon-wraper-2"><i class="fa fa-mobile fa-3x contact-info-icon" aria-hidden="true"></i></div>
+                        <p class="contact-info"><small>{{content.PHONELABEL}}:</small><strong> {{content.PHONENUMBER}}</strong></p>
+                    </div>
+
+                    <div class="contact-element">
+                        <div class="contact-icon-wraper-3"><i class="fa fa-map-marker fa-3x contact-info-icon" aria-hidden="true"></i></i>
+                        </div>
+                        <p class="contact-info"><small>{{content.LOCATIONLABEL}}:</small><strong> {{content.LOCATION}}</strong></p>
+                    </div>
+
+                </div>
+                <div class="col-md-7">
+
+                    <form class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>{{content.LEAVEMESSAGE}}</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" placeholder="{{content.NAMEPLACEHOLDER}}" class="contact-form-input" name="name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" placeholder="{{content.EMAILPLACEHOLDER}}" class="contact-form-input" name="email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea placeholder="{{content.MESSAGEPLACEHOLDER}}" class="contact-form-input contact-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="submit" value="{{content.SENDBTN}}" class="contact-form-btn">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer style="height: 100px; background-color: #424242">
+
+</footer>
+
+</div>

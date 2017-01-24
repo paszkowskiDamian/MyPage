@@ -1,5 +1,5 @@
 {
-    "SECTIONS" : ["about me" , "my work", "skills", "resume", "contact"],
+    "SECTIONS" : ["about me" , "my work", "skills", "resume", "contact me"],
     "NAME" : "damian",
     "LASTNAME" : "paszkowski"
 }
