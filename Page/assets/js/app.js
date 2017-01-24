@@ -222,7 +222,7 @@ app.controller('projectViewCtrl', function ($scope, $element, $attrs, scrollSvrc
 
 var app = angular.module('app');
 
-app.controller('resumeCtrl', function ($scope, getContentSvrc) {
+app.controller('resumeCtrl', function ($scope, getContentSvrc) { 
 
     $scope.$watch(function () {
         return getContentSvrc.getCurrentLang();
@@ -386,7 +386,7 @@ app.directive('resume',function () {
         scope: {
 
         },
-        controller: 'resumeCtrl',
+        controller: 'resumeCtrl', 
         templateUrl: 'assets/templates/resume.html'
     }
   })

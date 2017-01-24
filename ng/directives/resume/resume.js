@@ -6,7 +6,7 @@ app.directive('resume',function () {
         scope: {
 
         },
-        controller: 'resumeCtrl',
+        controller: 'resumeCtrl', 
         templateUrl: 'assets/templates/resume.html'
     }
   })

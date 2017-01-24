@@ -1,6 +1,6 @@
 var app = angular.module('app');
 
-app.controller('resumeCtrl', function ($scope, getContentSvrc) {
+app.controller('resumeCtrl', function ($scope, getContentSvrc) { 
 
     $scope.$watch(function () {
         return getContentSvrc.getCurrentLang();
