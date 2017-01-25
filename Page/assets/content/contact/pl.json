@@ -9,10 +9,13 @@
         "LOCATION" : "Gliwice",
 
 
-        "LEAVEMESSAGE" : "Proszę zostaw mi wiadomość",
+        "LEAVEMESSAGE" : "Napisz do mnie",
         "NAMEPLACEHOLDER": "imię",
         "EMAILPLACEHOLDER": "email",
         "MESSAGEPLACEHOLDER": "wiadomość",
-        "SENDBTN": "wyślij"
+        "SENDBTN": "wyślij",
+
+        "THANKSMESSAGE": "Dziękuje za wiadomość!",
+        "SOCIAL": "Znajdź mnie na: "
 
 }
