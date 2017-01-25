@@ -11,14 +11,16 @@
                     "PROJECT" : "AirControl",
                     "SUBTEXT" : "PanGenerator workshops",
                     "IMAGEURL" : ["assets/img/projects/web/air-ctrl/airctrl1.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
+                    "HREF":"http://airctrl.stream/1",
+                    "LINK":"Visit web page",
+                    "DESCRIPTION" : "During workshops, I have created a web page showing data collected from weather station also created during workshops. The header consists of four indicators showing current air pollution levels from the station, number agents in the background depend on pollution. Below are charts showing collected data over time. On the page, I have used 5p.js and chart.js "
                 },
 
                 {
                     "PROJECT" : "PolCer",
                     "SUBTEXT" : "ceramics manufacturers website",
                     "IMAGEURL" : ["assets/img/projects/web/polcer/polcer2.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
+                    "DESCRIPTION" : "This page was created for a ceramic manufacturer. AngularJS was used to create single page application. The page can be viewed in three languages. Photos also have been taken by me."
                 }
 
             ]
@@ -38,7 +40,7 @@
                                     "assets/img/projects/architecture/hostel/rzut1.jpg",
                                     "assets/img/projects/architecture/hostel/rzut2.jpg",
                                     "assets/img/projects/architecture/hostel/rzut3.jpg"],
-                    "DESCRIPTION" : "This project was made during second year of studies. To find an idea for this project I went to the mountains to see a plot. It took almost 3 hours to get to the top and it was worth it. The view was a reward. That’s why I wanted to create a place where people can rest and enjoy the view. First I elevated grassland to make a flat viewing platform with glass pavilion containing restaurant and staircase. Below the platform there is small spa, room with fireplace to integrate with others. On the lowest level there are actual hostel rooms. Elevation is made of wood to blend with environment. "
+                    "DESCRIPTION" : "This project was made during the second year of studies. The remarkable feature of the plot is a view.  That’s why I wanted to create a place where people can rest and enjoy the view. First I elevated grassland to make a flat viewing platform with glass pavilion containing restaurant and staircase. Below the platform, there is a small spa, room with fireplace to integrate with fellow travelers. On the lowest level, there are actual hostel rooms. Elevation is made of wood to blend with environment. "
                 },
 
                 {
@@ -50,7 +52,7 @@
                                     "assets/img/projects/architecture/workshops/workshops2.jpg",
                                     "assets/img/projects/architecture/workshops/workshops1.jpg"
                                     ],
-                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+                    "DESCRIPTION" : "Presented projects were created during workshops where I was a tutor. Week-long workshops begin with three days introduction to Rhinoceros 3D and Grasshopper and four days designing, manufacturing and assembling projects. Participants work in small groups carrying out their ideas and my work is to help them with design and technical problems."
                 },
 
                 {
@@ -60,7 +62,7 @@
                                     "assets/img/projects/architecture/cars/script.jpg",
                                     "assets/img/projects/architecture/cars/rzut.jpg"
                                     ],
-                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+                    "DESCRIPTION" : "This project was created during my internship in NAS-DRA. My task was to design sun shading device and renderings. At first, I decided to run sun analysis than I make a script to control number, depth, and angle of blinds. Script also allows changing a gap between frames in order to let more sunlight in winter mounts."
                 },
 
                 {
@@ -69,7 +71,7 @@
                     "IMAGEURL" : [  "assets/img/projects/architecture/hive/render.jpg",
                                     "assets/img/projects/architecture/hive/script.jpg"
                                     ],
-                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+                    "DESCRIPTION" : "This script was developed during Shapes of Logic Workshops. An artificial flock of bees was created which chooses the nearest forest to collect pollen during another orbiting around the center point of HIVE (agents builders). Every time an agent comes from the forest with building material builders bees expand HIVE. Metaball algorithm was used to create structure."
                 }
 
             ]
@@ -81,17 +83,17 @@
             "PROJECTS" : [
 
                 {
-                    "PROJECT" : "Awesome page",
+                    "PROJECT" : "The charm of failure",
                     "SUBTEXT" : "Student Concuil POLŚL",
                     "IMAGEURL" : ["assets/img/projects/graphics/poster.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
+                    "DESCRIPTION" : "The poster was created to inform about lecture with a famous architect at the department of Architecture. It was during the time I was a member of student council."
                 },
 
                 {
-                    "PROJECT" : "Even better page",
+                    "PROJECT" : "Ladder",
                     "SUBTEXT" : "Student Concuil POLŚL",
                     "IMAGEURL" : ["assets/img/projects/graphics/drabina.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
+                    "DESCRIPTION" : "The poster was created to inform about important dates for candidates for faculty of architecture. The ladder is a tradition, after entry exam, every candidate has to climb it for luck. It was during the time I was a member of student council."
                 }
 
             ]

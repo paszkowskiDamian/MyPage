@@ -14,7 +14,7 @@
                 <div class="col-md-5">
                     <div class="contact-element">
                         <div class="contact-icon-wraper"><i class="fa fa-envelope fa-2x contact-info-icon" aria-hidden="true"></i></div>
-                        <p class="contact-info"><small>{{content.EMAILLABEL}}:</small><strong> {{content.EMAIL}}</strong></p>
+                        <p class="contact-info"><small>{{content.EMAILLABEL}}:</small><strong> paszko.damian<i class='fa fa-at' aria-hidden='true'></i>gmail.com</strong></p>
                     </div>
 
                     <div class="contact-element">
@@ -31,7 +31,11 @@
                 </div>
                 <div class="col-md-7">
 
-                    <form class="container">
+                    <div class="contact-form-message" ng-hide="true">
+
+                    </div>
+
+                    <form class="container" ng-hide="hideForm">
                         <div class="row">
                             <div class="col-12">
                                 <h4>{{content.LEAVEMESSAGE}}</h4>
@@ -39,15 +43,15 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="{{content.NAMEPLACEHOLDER}}" class="contact-form-input" ng-model="name" name="name">
+                                <input type="text" placeholder="{{content.NAMEPLACEHOLDER}}" class="contact-form-input" ng-model="name" name="name" required>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" placeholder="{{content.EMAILPLACEHOLDER}}" class="contact-form-input" ng-model="email" name="email">
+                                <input type="email" placeholder="{{content.EMAILPLACEHOLDER}}" class="contact-form-input" ng-model="email" name="email" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <textarea placeholder="{{content.MESSAGEPLACEHOLDER}}" class="contact-form-input contact-textarea" ng-model="message"></textarea>
+                                <textarea placeholder="{{content.MESSAGEPLACEHOLDER}}" class="contact-form-input contact-textarea" ng-model="message" required></textarea>
                             </div>
                         </div>
                         <div class="row">
@@ -56,6 +60,11 @@
                             </div>
                         </div>
                     </form>
+                    <div class="container" ng-hide="!hideForm">
+                        <div class="row">
+                            <h3 class="contact-thx-message">{{content.THANKSMESSAGE}}</h3>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -63,8 +72,21 @@
         </div>
     </div>
 
-    <footer style="height: 100px; background-color: #424242">
-
+    <footer >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 footer-text"><small> Design and Website by</small><strong> damianPaszkowski</strong></div>
+                <div class="col-md-6 contact-social-icons">
+                    
+                    <a target="_blank" href="https://www.instagram.com/damian.the.explorer/" ><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://pl.linkedin.com/in/damian-paszkowski-73481990"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/damian.paszkowski.3"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://github.com/paszkowskiDamian"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                    <small class="social-find-me">{{content.SOCIAL}}</small>
+                    
+                </div>
+            </div>
+        </div>
 </footer>
 
 </div>

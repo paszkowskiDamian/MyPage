@@ -6,41 +6,38 @@ app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc) {
     $scope.email = "";
     $scope.message = "";
 
+    $scope.hideForm = false;
+
     $scope.thanks = false;
     $scope.nameError = false;
     $scope.emailError = false;
     $scope.messageError = false;
 
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
     $scope.send = function () {
 
-        if ($scope.name === undefined || $scope.name.length === 0) {
-            $scope.nameError = true;
-            console.log('nameErr');
-        }
+        $scope.nameError = ($scope.name === undefined || $scope.name.length === 0);
 
-        if (validateEmail($scope.emial)) {
-            $scope.emailError = true;
-            console.log('emailErr'+ validateEmail($scope.emial));
-        }
+        $scope.emailError = (!validateEmail($scope.email));
 
-        if ($scope.message === undefined || $scope.message.length === 0) {
-            $scope.messageError = true;
-            console.log('messErr' + $scope.message.length === 0);
-        }
+        $scope.messageError = ($scope.message === undefined || $scope.message.length === 0);
 
         if (!$scope.nameError && !$scope.emailError && !$scope.messageError) {
-            console.log('udalo sie')
+
+            $scope.hideForm = true;
+
             emailSvrc.sendEmail($scope.nameError, $scope.emailError, $scope.messageError).then(function (data) {
+
                 if (data.data === "sucess") {
                     console.log('server odpowiedział!')
                     $scope.thanks = true;
                 }
-            });
-        }
 
-        function validateEmail(email) {
-            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(email);
+            });
         }
 
     }

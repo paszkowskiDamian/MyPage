@@ -9,7 +9,7 @@
     $headers .= 'From: <damian@paszkowski.net.pl>' . "\r\n";
 
     if(strlen($params['message'])!=0 && !filter_var($params['email'], FILTER_VALIDATE_EMAIL) === false ){
-         mail("paszko.damian@gmail.com","Message from ".$params['name'] ,htmlentities($params['message']).'<br><br><strong>FROM: '.$params['email'].'</strong>',$headers);
+         mail("paszko.damian@gmail.com","Message from ".htmlentities($params['name']) ,htmlentities($params['message']).'<br><br><strong>FROM: '.htmlentities($params['email']).'</strong>',$headers);
          echo 'sucess';
     }else{
         echo 'error';
