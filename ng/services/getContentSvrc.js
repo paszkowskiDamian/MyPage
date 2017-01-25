@@ -1,9 +1,16 @@
 var app = angular.module('app');
 
-app.service('getContentSvrc', function ($http) {
+app.service('getContentSvrc', function ($http,$cookies) {
     var langKey = ['en', 'pl'];
     var defaultLang = 'en';
-    var currentLang = defaultLang;
+    
+    var userLang = $cookies.get('usertLang');
+    if(userLang !== undefined)
+    {
+        var currentLang  = userLang;
+    }else{
+        var currentLang = defaultLang;
+    }
 
     this.setDefault = function (key) {
         if (langKey.includes(key)) {
@@ -36,6 +43,7 @@ app.service('getContentSvrc', function ($http) {
     this.setCurrentLang = function(key) {
         if (langKey.includes(key)) {
             currentLang = key;
+                $cookies.put('usertLang',key);
         }
     }
 

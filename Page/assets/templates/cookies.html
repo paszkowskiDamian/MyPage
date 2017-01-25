@@ -1,0 +1,45 @@
+<div class="cookies-panel" ng-hide='accept'>
+    <p>{{content.COOKIESINFO}}</p>
+    <button class="cookies-accept" ng-click="acceptCookies()">{{content.ACCEPTBTN}}</button>
+    <button class="cookies-moreinfo" ng-click="moreInfo = !moreInfo">{{content.MOREINFO}}</button>
+</div>
+
+<div class="cookies-info" ng-show="moreInfo" >
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-11">
+                <h3>{{content.HEADER}}</h3>
+            </div>
+            <div class="col-sm-1" ng-click="moreInfo = false">
+                <h3><i class="fa fa-times fa-x2 cookies-icon" aria-hidden="true"></i></h3>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p><strong>{{content.WHATHEADER}}</strong></p>
+                <p>{{content.WHATBODY}}</p>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p><strong>{{content.HOWHEADER}}</strong></p>
+                <p>{{content.HOWBODY}}</p>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p><strong>{{content.CANHEADER}}</strong></p>
+                <p>{{content.CANBODY}}</p>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p><strong>{{content.FOOTER}}</strong></p>
+            </div>
+        </div>
+    </div>
+</div>

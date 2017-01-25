@@ -19,7 +19,7 @@
                 <i  ng-hide="display" class="fa fa-bars navigationUI" aria-hidden="true"></i>
                 <i  ng-hide="!display" class="fa fa-times navigationUI" aria-hidden="true"></i>
                 <span class="menu-mobile-logo">paszkowski</span>
-            </div>
+            </div> 
             <p class="menu-mobile-selector">
                 <span ng-repeat="lg in langlist"><span class='menu-lg-selector' ng-class=" lg == language ? 'menu-current' : 'menu-other'" ng-click="foo(lg)">{{lg}}</span>
                 <span ng-if="langlist.length-1 > $index"> | </span>

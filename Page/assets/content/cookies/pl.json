@@ -1,0 +1,17 @@
+{
+        "COOKIESINFO" : "Strona wykorzystuje pliki cookie by dostarczyć Ci jak najlepsze doświadczenie oraz gromadzenia anonimowych informacji statystycznych. ",
+        "ACCEPTBTN" : "Akceptuje",
+        "MOREINFO": "Więcej informacji",
+
+        "HEADER": "Informacja dotycząca cookies",
+        "WHATHEADER": "Czym są ciasteczka (pliki cookies)?",
+        "WHATBODY": "Ciasteczko jest plikiem alfanumerycznym (tekstowym), który jest zapisywany na komputerze użytkownika podczas odwiedzin naszej witryny (lub aktualizowany - w przypadku odwiedzin ponownych/kolejnych).",
+        "HOWHEADER": "W jaki sposób wykorzystuje cookies na mojej stronie ?",
+        "HOWBODY": "Nie gromadzimy ani nie przetwarzamy żadnych informacji pozwalających na bezpośrednią identyfikację danych osobowych. Pliki cookies są wykorzystywane na mojej stronie do celów statystycznych (dotyczących statystyk) oraz w celu zapewnienia prawidłowego działania serwisu i zapamiętywania preferencji użytkownika.",
+        "CANHEADER": "Czy mogę wyłączyć obsługę Cookies?",
+        "CANBODY": "Tak, możesz to zrobić w każdej chwili poprzez zmianę ustawień swojej przeglądarki w zakresie obsługi Cookies.",
+        "OFFHEADER": "Jak wyłaczyć obsługę ciasteczek w poszczególnych przeglądarkach:",
+        "OFFBODY" : "",
+        "FOOTER": "Jeśli Twoja przeglądarka akceptuje obsługę Cookies, oznacza to wyrażenie zgody na stosowanie cookies przez naszą witrynę."
+
+}
