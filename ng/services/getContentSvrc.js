@@ -1,14 +1,13 @@
 var app = angular.module('app');
 
-app.service('getContentSvrc', function ($http,$cookies) {
+app.service('getContentSvrc', function ($http, $cookies) {
     var langKey = ['en', 'pl'];
     var defaultLang = 'en';
-    
+
     var userLang = $cookies.get('usertLang');
-    if(userLang !== undefined)
-    {
-        var currentLang  = userLang;
-    }else{
+    if (userLang !== undefined) {
+        var currentLang = userLang;
+    } else {
         var currentLang = defaultLang;
     }
 
@@ -40,10 +39,12 @@ app.service('getContentSvrc', function ($http,$cookies) {
         }
     }
 
-    this.setCurrentLang = function(key) {
+    this.setCurrentLang = function (key) {
         if (langKey.includes(key)) {
             currentLang = key;
-                $cookies.put('usertLang',key);
+            var expireDate = new Date();
+            expireDate.setDate(expireDate.getDate() + 7);
+            $cookies.put('usertLang', key, { 'expires': expireDate });
         }
     }
 

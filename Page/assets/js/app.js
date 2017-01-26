@@ -6,6 +6,9 @@ var app = angular.module('app',
         'ngCookies'
     ]);
 
+app.config(['$compileProvider', function ($compileProvider) {
+  $compileProvider.debugInfoEnabled(false);
+}]);
 
 var app = angular.module('app');
 
@@ -25,15 +28,21 @@ app.controller('aboutMeCtrl', function ($scope, getContentSvrc) {
 
 var app = angular.module('app');
 
-app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc) {
+app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc, $cookies) {
 
     $scope.name = "";
     $scope.email = "";
     $scope.message = "";
 
-    $scope.hideForm = false;
+    if ($cookies.get('messageSent') === 'true') {
+        $scope.hideForm = true;
+        $scope.thanks = true;
+    } else {
+        $scope.hideForm = false;
+        $scope.thanks = false;
+    }
 
-    $scope.thanks = false;
+
     $scope.nameError = false;
     $scope.emailError = false;
     $scope.messageError = false;
@@ -42,7 +51,7 @@ app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc) {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
     }
-
+ 
     $scope.send = function () {
 
         $scope.nameError = ($scope.name === undefined || $scope.name.length === 0);
@@ -55,10 +64,12 @@ app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc) {
 
             $scope.hideForm = true;
 
-            emailSvrc.sendEmail($scope.nameError, $scope.emailError, $scope.messageError).then(function (data) {
+            emailSvrc.sendEmail($scope.name, $scope.email, $scope.message).then(function (data) {
 
                 if (data.data === "sucess") {
-                    console.log('server odpowiedział!')
+                    var expireDate = new Date();
+                    expireDate.setDate(expireDate.getDate() + 7);
+                    $cookies.put('messageSent', 'true', { 'expires': expireDate });
                     $scope.thanks = true;
                 }
 
@@ -79,17 +90,19 @@ app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc) {
 })
 var app = angular.module('app');
 
-app.controller('cookiesCtrl',function ($scope,getContentSvrc,$cookies) {
+app.controller('cookiesCtrl', function ($scope, getContentSvrc, $cookies) {
 
     $scope.accept = $cookies.get('cookiesAccepted');
     $scope.accept === undefined ? $scope.accept = false : $scope.accept;
 
     $scope.moreInfo = false;
 
-    $scope.acceptCookies = function () { 
+    $scope.acceptCookies = function () {
         $scope.accept = true;
-        $cookies.put('cookiesAccepted','true');
-     }
+        var expireDate = new Date();
+        expireDate.setDate(expireDate.getDate() + 7);
+        $cookies.put('cookiesAccepted', 'true',{ 'expires': expireDate });
+    }
 
     $scope.$watch(function () {
         return getContentSvrc.getCurrentLang();
@@ -99,7 +112,7 @@ app.controller('cookiesCtrl',function ($scope,getContentSvrc,$cookies) {
         });
     }, true)
 
-  })
+})
 var app = angular.module('app');
 
 app.controller('headerCtrl', function ($scope, getContentSvrc, $rootScope) {
@@ -286,24 +299,25 @@ var app = angular.module('app');
 app.service('emailSvrc',function($http) {
     
     this.sendEmail = function(name,email,message){
+        
         return $http.post('api/email.php',{
             'name': name,
             'email': email,
             'message': message 
         });
+
     }
 })
 var app = angular.module('app');
 
-app.service('getContentSvrc', function ($http,$cookies) {
+app.service('getContentSvrc', function ($http, $cookies) {
     var langKey = ['en', 'pl'];
     var defaultLang = 'en';
-    
+
     var userLang = $cookies.get('usertLang');
-    if(userLang !== undefined)
-    {
-        var currentLang  = userLang;
-    }else{
+    if (userLang !== undefined) {
+        var currentLang = userLang;
+    } else {
         var currentLang = defaultLang;
     }
 
@@ -335,10 +349,12 @@ app.service('getContentSvrc', function ($http,$cookies) {
         }
     }
 
-    this.setCurrentLang = function(key) {
+    this.setCurrentLang = function (key) {
         if (langKey.includes(key)) {
             currentLang = key;
-                $cookies.put('usertLang',key);
+            var expireDate = new Date();
+            expireDate.setDate(expireDate.getDate() + 7);
+            $cookies.put('usertLang', key, { 'expires': expireDate });
         }
     }
 

@@ -6,7 +6,7 @@
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // More headers
-    $headers .= 'From: <damian@paszkowski.net.pl>' . "\r\n";
+    $headers .= 'From: '.htmlentities($params['name']) . "\r\n";
 
     if(strlen($params['message'])!=0 && !filter_var($params['email'], FILTER_VALIDATE_EMAIL) === false ){
          mail("paszko.damian@gmail.com","Message from ".htmlentities($params['name']) ,htmlentities($params['message']).'<br><br><strong>FROM: '.htmlentities($params['email']).'</strong>',$headers);

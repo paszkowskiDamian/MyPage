@@ -2,7 +2,7 @@
     <div class="col-md-6">
         <div class="row">
             <div class="col-12">
-                <img src="{{mainImage}}" class="project-view-maninImage">
+                <img ng-src="{{mainImage}}" class="project-view-maninImage" alt="project image">
             </div>
         </div>
         <div class="row">
@@ -10,7 +10,7 @@
 
                 <div class="row">
                     <div class="col-3" ng-repeat="img in imageList" ng-click="setMain(img)">
-                        <img class="project-view-thumnails" src="{{img}}" width="100%" ng-if="imageList.length!==1">
+                        <img class="project-view-thumnails" ng-src="{{img}}" width="100%" ng-if="imageList.length!==1" alt='project thumbnail'>
                     </div>
                 </div>
 
@@ -25,10 +25,10 @@
                 <small class="project-view-subtext">{{project.SUBTEXT}}</small>
             </div class="col-6">
             <div class="col-6 icon-div" ng-click="hide = true;return()">
-                <i class="fa fa-arrow-up fa-2x icon" aria-hidden="true" ></i>
+                <i class="fa fa-arrow-up fa-2x icon" aria-hidden="true"></i>
             </div>
         </div>
-        <p><a class="project-view-a" href="{{project.HREF}}">{{project.LINK}}</a></p>
+        <p><a class="project-view-a" ng-href="{{project.HREF}}">{{project.LINK}}</a></p>
         <p class="project-view-description">{{project.DESCRIPTION}}</p>
     </div>
 

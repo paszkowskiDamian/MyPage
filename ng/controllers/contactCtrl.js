@@ -1,14 +1,20 @@
 var app = angular.module('app');
 
-app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc) {
+app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc, $cookies) {
 
     $scope.name = "";
     $scope.email = "";
     $scope.message = "";
 
-    $scope.hideForm = false;
+    if ($cookies.get('messageSent') === 'true') {
+        $scope.hideForm = true;
+        $scope.thanks = true;
+    } else {
+        $scope.hideForm = false;
+        $scope.thanks = false;
+    }
 
-    $scope.thanks = false;
+
     $scope.nameError = false;
     $scope.emailError = false;
     $scope.messageError = false;
@@ -17,7 +23,7 @@ app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc) {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
     }
-
+ 
     $scope.send = function () {
 
         $scope.nameError = ($scope.name === undefined || $scope.name.length === 0);
@@ -30,10 +36,12 @@ app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc) {
 
             $scope.hideForm = true;
 
-            emailSvrc.sendEmail($scope.nameError, $scope.emailError, $scope.messageError).then(function (data) {
+            emailSvrc.sendEmail($scope.name, $scope.email, $scope.message).then(function (data) {
 
                 if (data.data === "sucess") {
-                    console.log('server odpowiedział!')
+                    var expireDate = new Date();
+                    expireDate.setDate(expireDate.getDate() + 7);
+                    $cookies.put('messageSent', 'true', { 'expires': expireDate });
                     $scope.thanks = true;
                 }
 

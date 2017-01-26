@@ -18,8 +18,7 @@
         </div>
         <div class="container">
             <div class="row my-work-gallery">
-                <div class="image" ng-click="click('view', proj )" style="background-image: url('{{proj.IMAGEURL[0]}}'); background-size: cover;  background-position: center"
-                    ng-repeat="proj in projects">
+                <div class="image" ng-click="click('view', proj )" ng-style="{'background-image': 'url(' + proj.IMAGEURL[0] + ')', 'background-size': 'cover',  'background-position': 'center'}" ng-repeat="proj in projects">
                 </div>
             </div>
         </div>

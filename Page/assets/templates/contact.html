@@ -1,4 +1,4 @@
-<div class="skills-section" id="{{content.SECTION.replace(' ','')}}">
+<div class="skills-section" ng-attr-id="{{content.SECTION.replace(' ','')}}">
 
     <div class="container">
         <div class="row">
@@ -43,15 +43,15 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="{{content.NAMEPLACEHOLDER}}" class="contact-form-input" ng-model="name" name="name" required>
+                                <input type="text" ng-attr-placeholder="{{content.NAMEPLACEHOLDER}}" class="contact-form-input" ng-model="name" name="name" required>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" placeholder="{{content.EMAILPLACEHOLDER}}" class="contact-form-input" ng-model="email" name="email" required>
+                                <input type="email" ng-attr-placeholder="{{content.EMAILPLACEHOLDER}}" class="contact-form-input" ng-model="email" name="email" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <textarea placeholder="{{content.MESSAGEPLACEHOLDER}}" class="contact-form-input contact-textarea" ng-model="message" required></textarea>
+                                <textarea ng-attr-placeholder="{{content.MESSAGEPLACEHOLDER}}" class="contact-form-input contact-textarea" ng-model="message" required></textarea>
                             </div>
                         </div>
                         <div class="row">
