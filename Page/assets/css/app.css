@@ -344,11 +344,15 @@ menu-mobile.ng-hide {
   background-color: #808080;
   margin-right: 5px;
   width: 24%;
-  height: 20vw;
   padding-bottom: 24%;
 /* = width for a 1:1 aspect ratio */
   float: left;
   margin-top: 5px;
+}
+@supports (-ms-ime-align: auto) {
+  .image {
+    height: 18vw;
+  }
 }
 @media only screen and (max-width: 767px) {
   .image {
