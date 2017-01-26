@@ -8,7 +8,7 @@
         <div class="col-2 menu-selector">
             <p>
                 <span ng-repeat="lg in langlist"><span class='menu-lg-selector' ng-class=" lg == language ? 'menu-current' : 'menu-other'" ng-click="foo(lg)">{{lg}}</span>
-                <span ng-if="langlist.length-1 > $index"> | </span>
+                <span ng-if="langlist.length-1 > $index" > | </span>
                 </span>
             </p>
         </div>

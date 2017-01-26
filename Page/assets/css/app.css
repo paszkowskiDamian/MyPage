@@ -243,9 +243,11 @@ footer a {
 }
 .menu-current {
   font-weight: bold;
+  cursor: default;
 }
 .menu-other {
   font-weight: lighter;
+  cursor: pointer;
 }
 menu-lg-selector {
   font-size: 1.2em;
