@@ -344,6 +344,7 @@ menu-mobile.ng-hide {
   background-color: #808080;
   margin-right: 5px;
   width: 24%;
+  height: 20vw;
   padding-bottom: 24%;
 /* = width for a 1:1 aspect ratio */
   float: left;
