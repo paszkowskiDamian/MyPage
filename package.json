@@ -16,7 +16,10 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-minify": "0.0.14",
+    "gulp-streamify": "^1.0.2",
     "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.0.1",
     "gulp-webserver": "^0.9.1"
   }
 }

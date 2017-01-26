@@ -6,7 +6,7 @@ app.controller('headerCtrl', function ($scope, getContentSvrc, $rootScope) {
         $scope.content = res.data;
     });
 
-    $scope.currentLang = getContentSvrc.getDefault();
+    $scope.currentLang = getContentSvrc.getCurrentLang();
     $scope.langKeys = getContentSvrc.getLangKeys();
 
     $scope.headerImage = 'assets/img/header_img.jpg';

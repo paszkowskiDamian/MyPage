@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-12">
+        <h4 class='skill-header'>{{category}}</h4> 
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-3 skill-element" ng-repeat="skill in skills">
+        <p class="skill-name">{{skill.SKILL}}</p> 
+        <div class='skill-bar'>
+            <div class='skill-bar-strip skill-bar-active' ng-style="{'width' : skill.LEVEL+'%' }"></div>
+            <div class='skill-bar-strip skill-bar-inactive' ng-style="{'width' : (100 - skill.LEVEL) + '%' }"></div>
+        </div>   
+    </div>
+
+</div>

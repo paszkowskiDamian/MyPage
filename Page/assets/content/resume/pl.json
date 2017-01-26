@@ -1,0 +1,43 @@
+{
+    "SECTION": "doświadczenie",
+    "WORKEXPERIENCE": {
+        "SECTIONSUBNAME": "doświadczenie zawodowe",
+        "EXP": [
+            {
+                "WHEN": "maj 2015 - nadal",
+                "POSSITION": "grasshopper + rhinoceros 3D prowadzący",
+                "SUBTEXT": "architektura parametryczna",
+                "DESCRIPTION": "Prowadzący warsztaty i szkolenia dla studentów z projektowania parametrycznego w programie Rhinoceros 3D i Grasshopper. Weekendowe szkolenia i tygodniowe warsztaty odbywają się w całej Polsce. Tygodniowe kursy rozbudowane są o proces projektowy zakończony fabrykacją pawilonów."
+            },
+            {
+                "WHEN": "lip 2015 - sie 2015",
+                "POSSITION": "stażysta",
+                "SUBTEXT": "NASDRA biuro architektoniczne",
+                "DESCRIPTION": "Staż w katowickim biurze  architektonicznym.  Przygotowywanie wizualizacji, analizy środowiskowe, opracowywanie koncepcji."
+            }
+        ]
+    },
+    "EDUCATION" : {
+        "SECTIONSUBNAME": "edukacja",
+        "EXP": [
+            {
+                "WHEN": "paź 2015 - nadal",
+                "POSSITION": "makrokierunek",
+                "SUBTEXT": "Politechnika Śląska",
+                "DESCRIPTION": "Kierunek łączący automatykę, elektronikę oraz informatykę nauczany w języku angielskim"
+            },
+            {
+                "WHEN": "paź 2012 - wrz 2015",
+                "POSSITION": "architektura",
+                "SUBTEXT": "Politechnika Śląska",
+                "DESCRIPTION": "Praca inżynierska dotyczyła opracowania projektu centrum naukowego w Parku Śląskim. Podczas studiów aktywna praca w samorządzie oraz kole naukowym Grawizja"
+            },
+            {
+                "WHEN": "mar 2015",
+                "POSSITION": "shapes of logic",
+                "SUBTEXT": "Międzynarodowa konferencja oraz warsztaty, Wrocław",
+                "DESCRIPTION": "Pierwsza edycja konferencji naukowej i warsztatów dotyczącej zagadnień projektowania parametrycznego, cyfrowej fabrykacji. Prezentacja wyników warsztatów na konferencji. "
+            }
+        ]
+    }
+}

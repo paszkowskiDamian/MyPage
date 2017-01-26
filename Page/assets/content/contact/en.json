@@ -1,0 +1,20 @@
+{
+        "SECTION" : "contact me",
+
+        "PHONELABEL" : "phone",
+        "PHONENUMBER" : "+48 668 049 497",
+        "EMAILLABEL" : "email",
+        "LOCATIONLABEL" : "location",
+        "LOCATION" : "Gliwice",
+
+
+        "LEAVEMESSAGE" : "Please leave me a message",
+        "NAMEPLACEHOLDER": "name",
+        "EMAILPLACEHOLDER": "email",
+        "MESSAGEPLACEHOLDER": "message",
+        "SENDBTN": "send",
+
+        "THANKSMESSAGE": "Thank You for message!",
+        "SOCIAL": "Find me at: "
+
+}

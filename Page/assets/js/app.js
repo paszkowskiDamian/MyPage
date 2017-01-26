@@ -2,62 +2,13 @@ var app = angular.module('app',
     [
         //here add depedencies
         //'pascalprecht.translate'
-        'ngAnimate'
+        'ngAnimate',
+        'ngCookies'
     ]);
 
-
-// app.config(['$translateProvider', function ($translateProvider) {
-
-//     $translateProvider.useStaticFilesLoader({
-//         files: [
-//             {
-//                 prefix: '../content/my-work-',
-//                 suffix: '.json'
-//             }
-//             //  ,
-//             // {
-//             //     prefix: '../content/locale-',
-//             //     suffix: '.json'
-//             //  },
-//             //  {
-//             //      prefix: '../content/skills-',
-//             //      suffix: '.json'
-//             //  },{
-//             //      prefix: '../content/resume-',
-//             //      suffix: '.json'
-//             //  }
-//         ]
-//     });
-//     $translateProvider.preferredLanguage('en');
-//     $translateProvider.fallbackLanguage(['en']);
-//     $translateProvider.useSanitizeValueStrategy('escape');
-// }]);
-
-// app.controller('Ctrl', ['$translate', '$scope', function ($translate, $scope) {
-
-
-
-
-//     $scope.getContent = function (param) {
-
-//         for (var i = 1; i < 5 ; i++) {
-//             $translate('MYWORK.' + param + '.PROJECTS.PROJECT' + i + '.PROJECTNAME').then(function (mywork) {
-//                 $scope.data = mywork;
-//                 translation = mywork;
-
-//                 console.log($scope.data);
-//                 console.log(mywork);
-//                 console.log('MYWORK.' + param + '.PROJECTS.PROJECT' + i + '.PROJECTNAME');
-//             })
-//         }
-//     }
-
-//     $scope.changeLanguage = function (langKey) {
-//         $translate.use(langKey);
-//         $scope.getContent();
-//     };
-// }]);
-
+app.config(['$compileProvider', function ($compileProvider) {
+  $compileProvider.debugInfoEnabled(false);
+}]);
 
 var app = angular.module('app');
 
@@ -77,13 +28,100 @@ app.controller('aboutMeCtrl', function ($scope, getContentSvrc) {
 
 var app = angular.module('app');
 
+app.controller('contactCtrl', function ($scope, getContentSvrc, emailSvrc, $cookies) {
+
+    $scope.name = "";
+    $scope.email = "";
+    $scope.message = "";
+
+    if ($cookies.get('messageSent') === 'true') {
+        $scope.hideForm = true;
+        $scope.thanks = true;
+    } else {
+        $scope.hideForm = false;
+        $scope.thanks = false;
+    }
+
+
+    $scope.nameError = false;
+    $scope.emailError = false;
+    $scope.messageError = false;
+
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+ 
+    $scope.send = function () {
+
+        $scope.nameError = ($scope.name === undefined || $scope.name.length === 0);
+
+        $scope.emailError = (!validateEmail($scope.email));
+
+        $scope.messageError = ($scope.message === undefined || $scope.message.length === 0);
+
+        if (!$scope.nameError && !$scope.emailError && !$scope.messageError) {
+
+            $scope.hideForm = true;
+
+            emailSvrc.sendEmail($scope.name, $scope.email, $scope.message).then(function (data) {
+
+                if (data.data === "sucess") {
+                    var expireDate = new Date();
+                    expireDate.setDate(expireDate.getDate() + 7);
+                    $cookies.put('messageSent', 'true', { 'expires': expireDate });
+                    $scope.thanks = true;
+                }
+
+            });
+        }
+
+    }
+
+
+    $scope.$watch(function () {
+        return getContentSvrc.getCurrentLang();
+    }, function (newVal) {
+        getContentSvrc.getData('contact').then(function (data) {
+            $scope.content = data.data;
+        });
+    }, true);
+
+})
+var app = angular.module('app');
+
+app.controller('cookiesCtrl', function ($scope, getContentSvrc, $cookies) {
+
+    $scope.accept = $cookies.get('cookiesAccepted');
+    $scope.accept === undefined ? $scope.accept = false : $scope.accept;
+
+    $scope.moreInfo = false;
+
+    $scope.acceptCookies = function () {
+        $scope.accept = true;
+        var expireDate = new Date();
+        expireDate.setDate(expireDate.getDate() + 7);
+        $cookies.put('cookiesAccepted', 'true',{ 'expires': expireDate });
+    }
+
+    $scope.$watch(function () {
+        return getContentSvrc.getCurrentLang();
+    }, function (newVal) {
+        getContentSvrc.getData('cookies').then(function (data) {
+            $scope.content = data.data;
+        });
+    }, true)
+
+})
+var app = angular.module('app');
+
 app.controller('headerCtrl', function ($scope, getContentSvrc, $rootScope) {
 
     getContentSvrc.getData('header').then((res) => {
         $scope.content = res.data;
     });
 
-    $scope.currentLang = getContentSvrc.getDefault();
+    $scope.currentLang = getContentSvrc.getCurrentLang();
     $scope.langKeys = getContentSvrc.getLangKeys();
 
     $scope.headerImage = 'assets/img/header_img.jpg';
@@ -222,6 +260,28 @@ app.controller('projectViewCtrl', function ($scope, $element, $attrs, scrollSvrc
 
 var app = angular.module('app');
 
+app.controller('resumeCtrl', function ($scope, getContentSvrc) { 
+
+    $scope.$watch(function () {
+        return getContentSvrc.getCurrentLang();
+    }, function (newVal) {
+        getContentSvrc.getData('resume').then(function (data) {
+            $scope.content = data.data;
+        });
+    }, true);
+
+
+
+})
+var app = angular.module('app');
+
+app.controller('skillCategoryCtrl',function ($scope) {
+
+    
+
+  })
+var app = angular.module('app');
+
 app.controller('skillsCtrl',function ($scope,getContentSvrc) {
 
 
@@ -236,10 +296,30 @@ app.controller('skillsCtrl',function ($scope,getContentSvrc) {
   })
 var app = angular.module('app');
 
-app.service('getContentSvrc', function ($http) {
+app.service('emailSvrc',function($http) {
+    
+    this.sendEmail = function(name,email,message){
+        
+        return $http.post('api/email.php',{
+            'name': name,
+            'email': email,
+            'message': message 
+        });
+
+    }
+})
+var app = angular.module('app');
+
+app.service('getContentSvrc', function ($http, $cookies) {
     var langKey = ['en', 'pl'];
     var defaultLang = 'en';
-    var currentLang = defaultLang;
+
+    var userLang = $cookies.get('usertLang');
+    if (userLang !== undefined) {
+        var currentLang = userLang;
+    } else {
+        var currentLang = defaultLang;
+    }
 
     this.setDefault = function (key) {
         if (langKey.includes(key)) {
@@ -269,9 +349,12 @@ app.service('getContentSvrc', function ($http) {
         }
     }
 
-    this.setCurrentLang = function(key) {
+    this.setCurrentLang = function (key) {
         if (langKey.includes(key)) {
             currentLang = key;
+            var expireDate = new Date();
+            expireDate.setDate(expireDate.getDate() + 7);
+            $cookies.put('usertLang', key, { 'expires': expireDate });
         }
     }
 
@@ -305,6 +388,27 @@ app.directive('aboutMe',function () {
         templateUrl: 'assets/templates/aboutme.html'
     }
   }) 
+var app = angular.module('app');
+
+app.directive('contact',function() {
+    return {
+        restrict: 'E',
+        scope: {
+
+        },
+        controller : 'contactCtrl',
+        templateUrl : 'assets/templates/contact.html'
+    }
+})
+var app = angular.module('app');
+
+app.directive('cookies',function () {
+    return {
+        restrict: "E",
+        controller: "cookiesCtrl",
+        templateUrl : 'assets/templates/cookies.html'
+    }
+  })
 var app = angular.module('app');
 
 app.directive('headerImg',function () {
@@ -354,6 +458,31 @@ app.directive('projectView',function () {
         },
         controller: 'projectViewCtrl',
         templateUrl: 'assets/templates/projectView.html'
+    }
+  })
+var app = angular.module('app');
+
+app.directive('resume',function () {
+    return {
+        restrict: 'E',
+        scope: {
+
+        },
+        controller: 'resumeCtrl', 
+        templateUrl: 'assets/templates/resume.html'
+    }
+  })
+var app = angular.module('app');
+
+app.directive('skillCategory',function () { 
+    return {
+        restrict: 'E',
+        scope: {
+            category : '=',
+            skills: '='
+        },
+        controller: 'skillCategoryCtrl',
+        templateUrl: 'assets/templates/skillCategory.html'
     }
   })
 var app = angular.module('app');

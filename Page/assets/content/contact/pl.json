@@ -1,0 +1,21 @@
+{
+        "SECTION" : "kontakt",
+
+        "PHONELABEL" : "telefon",
+        "PHONENUMBER" : "668049497",
+        "EMAILLABEL" : "email",
+        "EMAIL" : "paszko.damian@gmail.com",
+        "LOCATIONLABEL" : "lokalizacja",
+        "LOCATION" : "Gliwice",
+
+
+        "LEAVEMESSAGE" : "Napisz do mnie",
+        "NAMEPLACEHOLDER": "imię",
+        "EMAILPLACEHOLDER": "email",
+        "MESSAGEPLACEHOLDER": "wiadomość",
+        "SENDBTN": "wyślij",
+
+        "THANKSMESSAGE": "Dziękuje za wiadomość!",
+        "SOCIAL": "Znajdź mnie na: "
+
+}

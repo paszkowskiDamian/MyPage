@@ -1,0 +1,17 @@
+{
+        "COOKIESINFO" : "Page collects cookies in order deliver best user experience and collect anonymous statistical information. ",
+        "ACCEPTBTN" : "Accept",
+        "MOREINFO": "More information",
+
+        "HEADER": "Information about cookies",
+        "WHATHEADER": "What are cookies",
+        "WHATBODY": "A cookie is an alphanumeric file (text), which is stored on your computer when you visit our site (or updated in the case of subsequent return visits).",
+        "HOWHEADER": "How do I use cookies on my website?",
+        "HOWBODY": "We do not collect or process any information allowing the direct identification of personal data. Cookies are used on my website for statistical purposes (for statistics) and to ensure proper operation of the service and remembering the user's preferences.",
+        "CANHEADER": "Can I disable cookies?",
+        "CANBODY": "Yes, you can do so at any time by changing the settings of your web browser in the use of Cookies.",
+        "OFFHEADER": "Jak wyłaczyć obsługę ciasteczek w poszczególnych przeglądarkach:",
+        "OFFBODY" : "",
+        "FOOTER": "If your browser accepts Cookies support, it means you agree to the use of cookies on our site."
+
+}

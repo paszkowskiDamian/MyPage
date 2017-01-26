@@ -1,0 +1,49 @@
+<div class="skills-section" ng-attr-id="{{content.SECTION.replace(' ','')}}">
+
+
+    <div class="container">
+        <div class="row">
+            <h2 class="col-12"><strong>{{content.SECTION}}</strong></h2>
+        </div>
+    </div>
+    <p class='line'></p>
+
+    <div class="resume-subsection">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7 ">
+                    <h4 class="resume-subsection-text"><strong>{{content.WORKEXPERIENCE.SECTIONSUBNAME}}</strong></h4>
+                    <div class="resume-sub-line"></div>
+                </div>
+            </div>
+            <div class="row resume-exp" ng-repeat="exp in content.WORKEXPERIENCE.EXP">
+                <div class="col-5 resume-exp-date">{{exp.WHEN | uppercase}}</div>
+                <div class="col-7">
+                    <h5 class="resume-possition"><strong> {{exp.POSSITION | uppercase}} </strong></h5>
+                    <small>{{exp.SUBTEXT}}</small>
+                    <p class='resume-exp-description'>{{exp.DESCRIPTION}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-5 resume-education-header"></div>
+                <div class="col-7 ">
+                    <h4 class="resume-subsection-text"><strong>{{content.EDUCATION.SECTIONSUBNAME}}</strong></h4>
+                    <div class='resume-education-line'></div>
+                </div>
+            </div>
+
+
+            <div class="row  resume-exp" ng-repeat="exp in content.EDUCATION.EXP">
+                <div class="col-5 resume-exp-date">{{exp.WHEN | uppercase}}</div>
+                <div class="col-7">
+                    <h5 class="resume-possition"><strong > {{exp.POSSITION | uppercase}} </strong></h5>
+                    <small>{{exp.SUBTEXT}}</small>
+                    <p class='resume-exp-description'>{{exp.DESCRIPTION}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -11,14 +11,14 @@
                     "PROJECT" : "AirControl",
                     "SUBTEXT" : "PanGenerator - warsztaty",
                     "IMAGEURL" : ["assets/img/projects/web/air-ctrl/airctrl1.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
-                },
+                    "DESCRIPTION" : "Podczas warsztatów stworzyłem stronę internetową pokazującą dane zebrane ze stacji meteorologicznej którą również zbudowaliśmy podczas warsztatów, która była oparta na platformie Arduino. Nagłówek składa się z czterech zagarów obrazujących aktualne poziomy zanieczyszczenia powietrza ze stacji, liczba cząsteczek w tle zależy od zanieczyszczenia. Poniżej wyświetlane są zebrane oraz ich zmiany w czasie. Na stronie użyłem 5p.js i chart.js"
+                }, 
 
                 {
                     "PROJECT" : "PolCer",
                     "SUBTEXT" : "strona producenta ceramiki",
                     "IMAGEURL" : ["assets/img/projects/web/polcer/polcer2.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
+                    "DESCRIPTION" : "Ta strona została utworzona dla firmy produkującej ceramikę. AngularJS został użyty do utworzenia SPA. Strona z założenia miała pełnić funkcje kontaktowe oraz obsługiwać kilka języków."
                 }
 
             ]
@@ -38,7 +38,7 @@
                                     "assets/img/projects/architecture/hostel/rzut1.jpg",
                                     "assets/img/projects/architecture/hostel/rzut2.jpg",
                                     "assets/img/projects/architecture/hostel/rzut3.jpg"],
-                    "DESCRIPTION" : "This project was made during second year of studies. To find an idea for this project I went to the mountains to see a plot. It took almost 3 hours to get to the top and it was worth it. The view was a reward. That’s why I wanted to create a place where people can rest and enjoy the view. First I elevated grassland to make a flat viewing platform with glass pavilion containing restaurant and staircase. Below the platform there is small spa, room with fireplace to integrate with others. On the lowest level there are actual hostel rooms. Elevation is made of wood to blend with environment. "
+                    "DESCRIPTION" : "Ten projekt powstał na drugim roku studiów. Niezwykłą cechą działki jest widok.  Dlatego chciałem stworzyć miejsce, gdzie ludzie mogą odpocząć i cieszyć się widokiem. Zacząłem od wyniesienia polany, tworząc taras widokowy na którym znajduje przeszklony pawilon restauracyjny. Poziom niżej znajduje się spa oraz pomieszczenie dla gości z roztaczającym się widokiem na góry. Na najniższym poziome znajdują się pokoje gości. Elewacja jest wykonana z drewna, idealnie wpisując się w otoczenie."
                 },
 
                 {
@@ -50,7 +50,7 @@
                                     "assets/img/projects/architecture/workshops/workshops2.jpg",
                                     "assets/img/projects/architecture/workshops/workshops1.jpg"
                                     ],
-                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+                    "DESCRIPTION" : "Prezentowane projekty zostały stworzone podczas warsztatów, gdzie byłem nauczycielem. Typowe tygodniowe warsztaty zaczynają się od trzech dni wprowadzenia do Rhinoceros 3D i Grasshopper’a. Pozostałe dni wykorzystywane są na projektowanie, fabrykację oraz montaż projektów. Uczestnicy pracują w małych grupach, podczas tych ostatnich dni moją pracą jest pomoc w realizacji ich pomysłów."
                 },
 
                 {
@@ -60,7 +60,7 @@
                                     "assets/img/projects/architecture/cars/script.jpg",
                                     "assets/img/projects/architecture/cars/rzut.jpg"
                                     ],
-                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+                    "DESCRIPTION" : "Ten projekt powstał podczas mojego stażu w NAS-DRA. Moim zadaniem było zaprojektowanie przysłon przeciwsłonecznych oraz dobór materiału elewacyjnego. Do projektowania przysłon stworzyłem skrypt który analizował nasłonecznienie wnętrz budynku w różnych porach dnia i roku w zależności od parametrów i geometrii przysłon."
                 },
 
                 {
@@ -69,7 +69,7 @@
                     "IMAGEURL" : [  "assets/img/projects/architecture/hive/render.jpg",
                                     "assets/img/projects/architecture/hive/script.jpg"
                                     ],
-                    "DESCRIPTION" : "This project was made during second year of studies. Plot where this building was supposed to be build is the only park in the neighborhood. I decided to preserve as much of the green space as I can so roof became park, most of the building is underground. Light is brought to inside by skylights. "
+                    "DESCRIPTION" : "Ten skrypt został opracowany na warsztatach Shapes of Logic. Napisałem skrypt który symulował sztuczny rój pszczół które przemieszczały się między ulem a najbliższym lasem. Gdy pszczoła wracała do ula z materiałem budowlanym pozycje pszczół budujących ul zostały zapisywane. Z uzyskanej chmury punktów i algorytmu metaball powstała ciekawa forma."
                 }
 
             ]
@@ -81,17 +81,17 @@
             "PROJECTS" : [
 
                 {
-                    "PROJECT" : "Plakat",
+                    "PROJECT" : "Urok porażki",
                     "SUBTEXT" : "Samorząd Studencki Wydziały Architektury",
                     "IMAGEURL" : ["assets/img/projects/graphics/poster.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
+                    "DESCRIPTION" : "Plakat powstał na wydarzenie na Wydziale Architektury Politechiki Ślaskiej. Informował o wykładzie ze znanym architektem Romualdem Loeglerem. W tym czasie byłem członkiem samorządu studenckiego gdzie byłem odpowiedzialny za grafikę."
                 },
 
                 {
-                    "PROJECT" : "Plakat",
+                    "PROJECT" : "Drabina",
                     "SUBTEXT" : "Samorząd Studencki Wydziały Architektury",
                     "IMAGEURL" : ["assets/img/projects/graphics/drabina.jpg"],
-                    "DESCRIPTION" : "This is awesome project"
+                    "DESCRIPTION" : "Plakat drabina powstał z myślą o kandydatach na wydział Architektury, prezentował najważniejsze daty dotyczące rekrutacji. Drabina jest tradycyjnym elementem egzaminu wstępnego, po którym każdy kandydat wchodzi na drabinę na szczęście. W tym czasie byłem członkiem samorządu studenckiego gdzie byłem odpowiedzialny za grafikę."
                 }
 
             ]

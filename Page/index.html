@@ -12,6 +12,8 @@
     <!--AngulaJs cdn-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.min.js"></script>
+    
 
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/f737dd2884.js"></script>
@@ -26,6 +28,7 @@
 </head>
 
 <body ng-app="app">
+    <cookies></cookies>
 
     <header ng-controller="headerCtrl">
         
@@ -34,16 +37,17 @@
 
         <header-img name="{{content.NAME}}" lastname="{{content.LASTNAME}}" imgurl=" assets/img/header_img.jpg "></header-img>
 
-        <!--<div style="background-image: url('assets/img/header_img.jpg');background-size: cover; height: 600px;">-->
-
-        </div>
     </header>
 
     <about-me></about-me>
 
     <my-work></my-work>
+
     <skills></skills>
 
+    <resume></resume>
+
+    <contact></contact> 
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="

@@ -6,23 +6,23 @@
             "SKILL_CONTAINER" : [
                 {
                     "SKILL" : "c++",
-                    "LEVEL" : "6"
+                    "LEVEL" : "50"
                 },
                 {
                     "SKILL" : "html",
-                    "LEVEL" : "6"
+                    "LEVEL" : "70"
                 },
                 {
                     "SKILL" : "css",
-                    "LEVEL" : "6"
+                    "LEVEL" : "70"
                 },
                 {
                     "SKILL" : "javascript",
-                    "LEVEL" : "6"
+                    "LEVEL" : "60"
                 },
                 {
                     "SKILL" : "git",
-                    "LEVEL" : "6"
+                    "LEVEL" : "50"
                 }
             ]
         },
@@ -31,15 +31,15 @@
             "SKILL_CONTAINER" : [
                 {
                     "SKILL" : "rhino3d",
-                    "LEVEL" : "6"
+                    "LEVEL" : "80"
                 },
                 {
                     "SKILL" : "grasshopper",
-                    "LEVEL" : "6"
+                    "LEVEL" : "80"
                 },
                 {
                     "SKILL" : "photoshop",
-                    "LEVEL" : "6"
+                    "LEVEL" : "80"
                 }
             ]
         }
